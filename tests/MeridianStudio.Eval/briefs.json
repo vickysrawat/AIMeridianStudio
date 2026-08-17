@@ -1,0 +1,69 @@
+[
+  {
+    "name": "healthcare-clinical-decision-support",
+    "request": {
+      "blueprintId": "eval-bp-hc-001",
+      "title": "AI Clinical Decision Support — Technical Specification",
+      "templateType": "technical-specification",
+      "domain": "Healthcare AI",
+      "subDomain": "Clinical Decision Support",
+      "solutionType": "ML Inference",
+      "blueprintContext": "A FHIR-based clinical decision support service that ingests HL7 v2 / FHIR R4 events, runs ML inference, and surfaces alerts to clinicians under HIPAA.",
+      "selectedTone": "Authoritative and precise for a technical audience.",
+      "selectedGoal": "A senior engineer can implement the system from this specification.",
+      "selectedCriteria": [
+        "Does it provide the architectural view?",
+        "Does it include a technology stack table?",
+        "Does it include security controls and compliance requirements?"
+      ]
+    },
+    "expectAnchors": ["FHIR", "HIPAA"],
+    "expectMermaid": true,
+    "expectFactChecked": true,
+    "maxRequiredPlaceholders": 6
+  },
+  {
+    "name": "fintech-fraud-executive-summary",
+    "request": {
+      "blueprintId": "eval-bp-fin-001",
+      "title": "Real-Time Payment Fraud Detection — Executive Summary",
+      "templateType": "executive-summary",
+      "domain": "Financial Technology",
+      "subDomain": "Fraud Detection",
+      "solutionType": "Event-Driven",
+      "blueprintContext": "An event-driven fraud detection platform scoring card transactions in real time with sub-100ms latency, integrated with the core ledger.",
+      "selectedTone": "Concise and decision-ready for executives.",
+      "selectedGoal": "An executive can decide whether to fund the initiative.",
+      "selectedCriteria": [
+        "Does it quantify the current problem with measurable metrics?",
+        "Does it end with a concrete call to action or next steps?"
+      ]
+    },
+    "expectAnchors": ["fraud"],
+    "expectMermaid": false,
+    "expectFactChecked": true,
+    "maxRequiredPlaceholders": 8
+  },
+  {
+    "name": "detailed-design-diagram-required",
+    "request": {
+      "blueprintId": "eval-bp-tech-001",
+      "title": "Document Ingestion Pipeline — Detailed Design",
+      "templateType": "detailed-design",
+      "domain": "Core Software & Tech",
+      "subDomain": "Document Processing",
+      "solutionType": "Microservice",
+      "blueprintContext": "A microservice pipeline that ingests documents, extracts text, embeds chunks, and indexes them for semantic search.",
+      "selectedTone": "Precise and implementation-focused.",
+      "selectedGoal": "A team can build the system sprint by sprint from this design.",
+      "selectedCriteria": [
+        "Does it provide the architectural view?",
+        "Does it include a database schema with CREATE TABLE DDL?"
+      ]
+    },
+    "expectAnchors": ["index"],
+    "expectMermaid": true,
+    "expectFactChecked": true,
+    "maxRequiredPlaceholders": 8
+  }
+]

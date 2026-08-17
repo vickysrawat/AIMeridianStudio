@@ -1,0 +1,117 @@
+[
+  {
+    "title": "Multi-Cloud Reference Architecture \u0026 Workload Placement Strategy",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it effectively addresses specialized AI/ML and data-intensive workload requirements. Success means stakeholders understand and endorse the architectural approach for extending Azure with alternate hyperscalers while maintaining governance.",
+    "criteriaUsed": [
+      "Proposed architecture clearly defines integration points and data flow between Azure and alternate hyperscalers.",
+      "Solution components leverage existing Azure Landing Zone and platform engineering models effectively.",
+      "Technical specifications for specialized AI/ML and data services are adequately detailed and justified.",
+      "Identified potential technical challenges and proposed mitigation strategies are comprehensive.",
+      "Does it provide the architectural view?",
+      "Does it include a solution directory tree with key files named?",
+      "Are all event producers and consumers defined with their JSON schemas and communication protocols?"
+    ],
+    "excerpt": "{\n  \u0022id\u0022: \u0022a1b2c3d4e5f6\u0022,\n  \u0022blueprintId\u0022: \u0022Multi-Cloud Strategy \u0026 Execution Assessment\u0022,\n  \u0022title\u0022: \u0022Multi-Cloud Reference Architecture \u0026 Workload Placement Strategy\u0022,\n  \u0022templateType\u0022: \u0022detailed-design\u0022,\n  \u0022createdAt\u0022: \u00222024-07-30T12:00:00Z\u0022,\n  \u0022content\u0022: \u0022# Multi-Cloud Reference Architecture \u0026 Workload Placement Strategy\\n\\nThis document provides a detailed design for the \u0027Multi-Cloud Reference Architecture \u0026 Workload Placement Strategy\u0027, a critical component of our broader \u0027Multi-Cloud Strategy \u0026 Execution Assessment\u0027. The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it effectively addresses specialized AI/ML and data-intensive workload requirements. Success means stakeholders understand and endorse the architectural approach for extending Azure with alternate hyperscalers while maintaining robust governance. This strategy is designed to overcome the limitations of a single-hyperscaler approach for advanced use cases, leveraging the strengths of...",
+    "goalAchievementPct": 100,
+    "iterationsUsed": 2,
+    "wasRefined": false,
+    "createdAt": "2026-06-27T07:54:58.0922551\u002B00:00",
+    "subDomain": null,
+    "embedding": null,
+    "embeddingSpace": null
+  },
+  {
+    "title": "Multi-Cloud Reference Architecture \u0026 Workload Placement Strategy",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it effectively addresses specialized AI/ML and data-intensive workload requirements. Success means stakeholders understand and endorse the architectural approach for extending Azure with alternate hyperscalers while maintaining governance.",
+    "criteriaUsed": [
+      "Proposed architecture clearly defines integration points and data flow between Azure and alternate hyperscalers.",
+      "Solution components leverage existing Azure Landing Zone and platform engineering models effectively.",
+      "Technical specifications for specialized AI/ML and data services are adequately detailed and justified.",
+      "Identified potential technical challenges and proposed mitigation strategies are comprehensive.",
+      "Does it provide the architectural view?",
+      "Does it include a solution directory tree with key files named?",
+      "Are all event producers and consumers defined with their JSON schemas and communication protocols?"
+    ],
+    "excerpt": "# Multi-Cloud Reference Architecture \u0026 Workload Placement Strategy\n\nThis document provides a detailed design for the \u0027Multi-Cloud Reference Architecture \u0026 Workload Placement Strategy\u0027, a critical component of our broader \u0027Multi-Cloud Strategy \u0026 Execution Assessment\u0027. The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it effectively addresses specialized AI/ML and data-intensive workload requirements. Success means stakeholders understand and endorse the architectural approach for extending Azure with alternate hyperscalers while maintaining robust governance. This strategy is designed to overcome the limitations of a single-hyperscaler approach for advanced use cases, leveraging the strengths of multiple cloud providers.\n\n## Introduction to the Federated Multi-Cloud Model\n\nThe federated multi-cloud model proposed herein is a strategic evolution from our current Azure-centric architecture. It acknowledges that while Azure provides a robust foundation, ...",
+    "goalAchievementPct": 100,
+    "iterationsUsed": 2,
+    "wasRefined": false,
+    "createdAt": "2026-06-27T07:55:57.0265317\u002B00:00",
+    "subDomain": null,
+    "embedding": null,
+    "embeddingSpace": null
+  },
+  {
+    "title": "Multi-Cloud Reference Architecture Blueprint",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "The primary goal is to validate the proposed federated multi-cloud model, ensuring it effectively extends existing Azure governance to new hyperscalers. Success means stakeholders understand and endorse the architectural approach for specialized AI/ML and data workloads, confirming its alignment with strategic objectives.",
+    "criteriaUsed": [
+      "The proposed architecture clearly defines integration points and responsibilities across hyperscalers.",
+      "Security and compliance controls are consistently applied and extend effectively to new cloud providers.",
+      "The solution demonstrates a clear path for achieving workload portability and data sovereignty.",
+      "Performance and scalability requirements for AI/ML and data workloads are adequately addressed.",
+      "Does it provide the architectural view?",
+      "Does it include a solution directory tree with key files named?",
+      "Are all event producers and consumers defined with their JSON schemas and communication protocols?"
+    ],
+    "excerpt": "{\n  \u0022id\u0022: \u0022a1b2c3d4e5f6\u0022,\n  \u0022blueprintId\u0022: \u0022Multi-Cloud Strategy \u0026 Execution Assessment\u0022,\n  \u0022title\u0022: \u0022Multi-Cloud Reference Architecture Blueprint\u0022,\n  \u0022templateType\u0022: \u0022detailed-design\u0022,\n  \u0022createdAt\u0022: \u00222024-07-30T12:00:00Z\u0022,\n  \u0022content\u0022: \u0022# Multi-Cloud Reference Architecture Blueprint\\n\\nThis document details the \u0027Multi-Cloud Reference Architecture Blueprint\u0027, a foundational component of our \u0027Multi-Cloud Strategy \u0026 Execution Assessment\u0027. The primary goal is to validate the proposed federated multi-cloud model, ensuring it effectively extends existing Azure governance to new hyperscalers. Success means stakeholders understand and endorse the architectural approach for specialized AI/ML and data workloads, confirming its alignment with strategic objectives. This blueprint outlines the strategic integration of alternate hyperscalers to complement our robust Azure foundation, specifically addressing the evolving demands for specialized AI/ML and data-intensive workloads.\\n\\n## Introduction...",
+    "goalAchievementPct": 100,
+    "iterationsUsed": 3,
+    "wasRefined": false,
+    "createdAt": "2026-06-27T08:43:15.8281210\u002B00:00",
+    "subDomain": null,
+    "embedding": null,
+    "embeddingSpace": null
+  },
+  {
+    "title": "Multi-Cloud Reference Architecture",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s long-term objectives for AI/ML capabilities, scalability, and vendor risk reduction. This document aims to secure stakeholder consensus on the architectural principles and high-level design for integrating a secondary hyperscaler.",
+    "criteriaUsed": [
+      "The proposed architecture must demonstrate technical feasibility for integrating a secondary hyperscaler with existing Azure foundations.",
+      "Security controls and identity management solutions must be robust and consistently applied across both cloud environments.",
+      "The design must support high availability, disaster recovery, and scalability requirements for critical workloads.",
+      "Workload portability mechanisms must be clearly defined and technically viable for high-demand use cases.",
+      "Does it provide the architectural view?",
+      "Does it include a solution directory tree with key files named?",
+      "Are all event producers and consumers defined with their JSON schemas and communication protocols?"
+    ],
+    "excerpt": "# Multi-Cloud Reference Architecture\n\nThis document details the \u0027Multi-Cloud Reference Architecture\u0027, a critical output from the \u0027Multi-Cloud Strategy \u0026 Execution Assessment\u0027. The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s long-term objectives for AI/ML capabilities, scalability, and vendor risk reduction. This document aims to secure stakeholder consensus on the architectural principles and high-level design for integrating a secondary hyperscaler, complementing the existing Azure foundation.\n\n## Introduction to the Federated Multi-Cloud Model\n\nThe federated multi-cloud model represents a strategic evolution from the client\u0027s current Azure-centric architecture. While Azure provides a robust and mature foundation with centralized governance and platform engineering, the assessment confirms its structural limitations in addressing the evolving demands for specialized compute, scalability, and service diversity, particula...",
+    "goalAchievementPct": 100,
+    "iterationsUsed": 2,
+    "wasRefined": false,
+    "createdAt": "2026-06-27T09:14:04.2499254\u002B00:00",
+    "subDomain": null,
+    "embedding": null,
+    "embeddingSpace": null
+  },
+  {
+    "title": "Multi-Cloud Reference Architecture",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s long-term objectives for AI/ML capabilities, scalability, and vendor risk reduction. This document aims to secure stakeholder consensus on the architectural principles and high-level design for integrating a secondary hyperscaler.",
+    "criteriaUsed": [
+      "The proposed architecture must demonstrate technical feasibility for integrating a secondary hyperscaler with existing Azure foundations.",
+      "Security controls and identity management solutions must be robust and consistently applied across both cloud environments.",
+      "The design must support high availability, disaster recovery, and scalability requirements for critical workloads.",
+      "Workload portability mechanisms must be clearly defined and technically viable for high-demand use cases.",
+      "Does it provide the architectural view?",
+      "Does it include a solution directory tree with key files named?",
+      "Are all event producers and consumers defined with their JSON schemas and communication protocols?"
+    ],
+    "excerpt": "# Multi-Cloud Reference Architecture\n\nThis document details the \u0027Multi-Cloud Reference Architecture\u0027, a critical output of the \u0027Multi-Cloud Strategy \u0026 Execution Assessment\u0027. The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s long-term objectives for AI/ML capabilities, scalability, and vendor risk reduction. This document aims to secure stakeholder consensus on the architectural principles and high-level design for integrating a secondary hyperscaler, complementing the existing Azure foundation.\n\n## Introduction to the Federated Multi-Cloud Model\n\nThe federated multi-cloud model represents a strategic evolution from the client\u0027s current Azure-centric architecture. While Azure provides a robust and mature foundation with centralized governance and platform engineering, the assessment confirms that a single hyperscaler approach limits access to specialized AI/ML capabilities and scalability for data-intensive workloads. This ...",
+    "goalAchievementPct": 100,
+    "iterationsUsed": 2,
+    "wasRefined": false,
+    "createdAt": "2026-06-27T09:19:53.0876371\u002B00:00",
+    "subDomain": null,
+    "embedding": null,
+    "embeddingSpace": null
+  }
+]

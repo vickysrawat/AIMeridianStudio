@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build *)",
+      "Read(//c/Users/rawatv/OneDrive - Kirkland/Desktop/Vivek/Learning/AI Learning/AIMeridianStudio/**)",
+      "Read(//c/Users/rawatv/**)",
+      "Bash(dotnet add *)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"Exit:$?\")",
+      "Bash(python -c \"import sys,json; cfg=json.load\\(sys.stdin\\); styles=cfg['projects']['meridian-studio-ui']['architect']['build']['options'].get\\('styles',[]\\); print\\(json.dumps\\(styles, indent=2\\)\\)\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.UI\\src\\app\\features\\execution-pipeline",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.UI\\src\\app\\core\\services",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.UI\\src\\app\\features\\domain-settings",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.UI\\src\\app\\features\\workspace",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.UI\\src\\app\\features\\trends-discovery",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.UI\\src\\app\\features\\architectural-blueprinter",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.UI\\src",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\docs\\ADR"
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+[
+  {
+    "title": "AIOps Incident Detection \u0026 Remediation \u2014 Proposal Document",
+    "domain": "Core Software \u0026 Tech",
+    "solutionType": "Event-Driven",
+    "goalUsed": "The reader can understand the AIOps platform\u0027s technical architecture, operational benefits, and strategic alignment. They should be able to validate its potential to significantly reduce MTTR and on-call burden.",
+    "criteriaUsed": [
+      "Clearly articulates the event-driven architecture and ML model effectiveness.",
+      "Demonstrates how the solution achieves 60% MTTR reduction and 35% on-call volume decrease.",
+      "Addresses non-functional targets: high availability, low latency, and accuracy.",
+      "Outlines the platform\u0027s scalability to handle increasing observability data volumes."
+    ],
+    "excerpt": "# AIOps Incident Detection \u0026 Remediation \u2014 Proposal Document\n\nThis proposal outlines the technical architecture, operational benefits, and strategic alignment of the AIOps Incident Detection \u0026 Remediation platform. The objective is to demonstrate how this solution can significantly reduce Mean Time To Resolution (MTTR) and alleviate on-call burden for engineering teams, thereby validating its potential to deliver substantial operational and financial efficiencies.\n\n## 1. Executive Summary\n\nThe AIOps Incident Detection \u0026 Remediation platform is an ML-powered incident intelligence solution designed to address critical operational challenges within Core Software \u0026 Tech environments, specifically in Cloud Infrastructure. By correlating alerts across metrics, logs, and traces, the platform aims to surface root-cause hypotheses, rank probable fixes, and execute approved remediation playbooks automatically. This approach directly tackles the prevalent issue of alert fatigue and manual root-ca...",
+    "goalAchievementPct": 75,
+    "iterationsUsed": 1,
+    "wasRefined": false,
+    "createdAt": "2026-06-24T19:49:10.9851856\u002B00:00"
+  },
+  {
+    "title": "Multi-Cloud Reference Architecture",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "For the Engineering team, the goal is to clearly articulate the technical rationale and architectural patterns for the federated multi-cloud model. Success means the team understands the proposed integration points, data flow, and security implications, enabling effective planning for implementation.",
+    "criteriaUsed": [
+      "The proposed architecture clearly defines integration patterns between Azure and the alternate hyperscaler.",
+      "The document specifies key services and technologies to be leveraged on both cloud platforms.",
+      "Potential technical challenges and their mitigation strategies for cross-cloud communication are addressed.",
+      "The solution ensures seamless data flow and governance across the multi-cloud environment.",
+      "Does it clearly state the problem or opportunity being addressed?",
+      "Does it describe the proposed solution with specific deliverables?",
+      "Does it include a phased delivery plan with timeline and costs?"
+    ],
+    "excerpt": "# Multi-Cloud Reference Architecture\n\nThis proposal outlines a strategic Multi-Cloud Reference Architecture designed to address the client\u0027s evolving demands for specialized AI/ML and data-intensive workloads. The objective is to strategically extend the existing mature Azure foundation with an alternate hyperscaler, thereby overcoming the limitations of a single hyperscaler approach. The core recommendation is to adopt a federated multi-cloud model, leveraging an additional hyperscaler for specialized capabilities while maintaining centralized governance and seamless integration with the established Azure Landing Zone. This architectural approach will significantly enhance workload portability, scalability, and mitigate vendor concentration risk, providing a robust and future-ready infrastructure for advanced analytics and machine learning.\n\n## 1. Executive Summary\n\nThe Multi-Cloud Reference Architecture proposes a federated model that strategically integrates a secondary hyperscaler ...",
+    "goalAchievementPct": 86,
+    "iterationsUsed": 1,
+    "wasRefined": false,
+    "createdAt": "2026-06-26T05:23:49.7754854\u002B00:00"
+  },
+  {
+    "title": "Multi-Cloud Strategy \u0026 Execution Assessment \u2014 Proposal Document",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "Obtain executive and board approval to initiate the strategic expansion to a multi-cloud model. This includes securing the necessary budget and resources to onboard an alternate hyperscaler for specialized AI/ML and data workloads, while ensuring seamless integration with existing Azure governance and platform engineering practices.",
+    "criteriaUsed": [
+      "Board approval for multi-cloud initiative and initial budget allocation.",
+      "Clear articulation of ROI for specialized AI/ML capabilities and risk mitigation.",
+      "Demonstrated alignment with long-term business growth and innovation objectives.",
+      "Identification of key business units benefiting from enhanced cloud capabilities.",
+      "Does it clearly state the problem or opportunity being addressed?",
+      "Does it describe the proposed solution with specific deliverables?",
+      "Does it include a phased delivery plan with timeline and costs?"
+    ],
+    "excerpt": "# Multi-Cloud Strategy \u0026 Execution Assessment \u2014 Proposal Document\n\nThis proposal outlines a strategic Multi-Cloud Strategy \u0026 Execution Assessment, designed to secure executive and board approval for initiating a critical expansion to a multi-cloud model. The objective is to obtain the necessary budget and resources to onboard an alternate hyperscaler, specifically for specialized AI/ML and data workloads, while ensuring seamless integration with our robust existing Azure governance and platform engineering practices. This strategic move is not merely an incremental technical adjustment but a foundational shift to unlock new capabilities, enhance competitive advantage, and future-proof our digital infrastructure.\n\n## 1. Executive Summary: Charting a Course for Future Growth\n\nThe current single-hyperscaler Azure foundation, while mature and well-governed, is reaching its limits in addressing the rapidly evolving demands of specialized AI/ML and data-intensive workloads. To maintain our l...",
+    "goalAchievementPct": 86,
+    "iterationsUsed": 1,
+    "wasRefined": false,
+    "createdAt": "2026-06-26T16:38:56.8917535\u002B00:00"
+  },
+  {
+    "title": "Multi-Cloud Phased Implementation Roadmap",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "For the Client Sponsor, the goal is to secure executive buy-in for the proposed multi-cloud strategy, demonstrating its alignment with long-term business objectives and competitive advantage. Success means obtaining a clear mandate to proceed with the strategic integration of alternate hyperscalers.",
+    "criteriaUsed": [
+      "Demonstrates clear ROI and TCO benefits over a 3-5 year horizon.",
+      "Aligns with the client\u0027s long-term digital transformation roadmap and growth objectives.",
+      "Provides a compelling case for reducing vendor concentration risk and enhancing market agility.",
+      "Secures executive approval for the proposed multi-cloud investment and strategic direction.",
+      "Does it clearly state the problem or opportunity being addressed?",
+      "Does it describe the proposed solution with specific deliverables?",
+      "Does it include a phased delivery plan with timeline and costs?"
+    ],
+    "excerpt": "# Multi-Cloud Phased Implementation Roadmap\n\nThis document outlines a strategic Multi-Cloud Phased Implementation Roadmap, designed to secure executive buy-in for a critical multi-cloud strategy. The primary objective is to demonstrate the profound alignment of this strategy with our long-term business objectives and to articulate its role in securing a sustained competitive advantage. Success will be measured by obtaining a clear mandate to proceed with the strategic integration of alternate hyperscalers, thereby expanding our digital capabilities beyond the current single-provider foundation.\n\n## 1. Executive Summary: Strategic Imperative for Multi-Cloud Evolution\n\nThe current single-hyperscaler Azure foundation, while robust and well-governed, is encountering structural limitations in addressing the rapidly evolving demands of specialized AI/ML and data-intensive workloads. Our initial attempts to mitigate these challenges through multi-region Azure deployments have proven insuffici...",
+    "goalAchievementPct": 71,
+    "iterationsUsed": 2,
+    "wasRefined": false,
+    "createdAt": "2026-06-26T17:56:41.0597711\u002B00:00"
+  },
+  {
+    "title": "Multi-Cloud Adoption \u0026 Integration Roadmap",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "For the Client Sponsor, the goal is to secure executive buy-in for the proposed federated multi-cloud strategy. This involves demonstrating how the strategy addresses current limitations, mitigates risk, and aligns with long-term business objectives, ensuring a clear path for implementation.",
+    "criteriaUsed": [
+      "The proposed multi-cloud architecture must seamlessly integrate with the existing Azure Landing Zone and platform engineering model.",
+      "The solution must demonstrate clear pathways for optimizing specialized AI/ML and data-intensive workloads across hyperscalers.",
+      "The strategy must include robust governance and security frameworks applicable across the federated multi-cloud environment.",
+      "The assessment must provide a clear roadmap for phased implementation and operational handover.",
+      "Does it clearly state the problem or opportunity being addressed?",
+      "Does it describe the proposed solution with specific deliverables?",
+      "Does it include a phased delivery plan with timeline and costs?"
+    ],
+    "excerpt": "# Multi-Cloud Adoption \u0026 Integration Roadmap\n\nThis proposal outlines a strategic Multi-Cloud Adoption \u0026 Integration Roadmap, designed to secure executive buy-in for a federated multi-cloud strategy. The objective is to demonstrate how this strategy directly addresses current limitations, mitigates critical risks, and aligns with our long-term business objectives, thereby ensuring a clear and actionable path for implementation. This roadmap is not merely a technical adjustment; it is a foundational shift to unlock new capabilities, enhance competitive advantage, and future-proof our digital infrastructure, particularly for specialized AI/ML and data-intensive workloads.\n\n## 1. Executive Summary: Charting a Course for Future Growth and Innovation\n\nThe current single-hyperscaler Azure foundation, while mature and well-governed, is reaching its limits in addressing the rapidly evolving demands of specialized AI/ML and data-intensive workloads. To maintain our leadership position and accele...",
+    "goalAchievementPct": 71,
+    "iterationsUsed": 1,
+    "wasRefined": false,
+    "createdAt": "2026-06-27T08:01:22.2458886\u002B00:00"
+  }
+]

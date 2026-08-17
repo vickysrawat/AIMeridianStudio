@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(cd \"c:/Users/rawatv/OneDrive - Kirkland/Desktop/Vivek/Learning/AI Learning/AIMeridianStudio/MeridianStudio.UI/dist/meridian-studio-ui/browser\")",
+      "Bash(node -e ' *)",
+      "Bash(seq 1 20)",
+      "Bash(sleep 1)",
+      "Bash([ -f /tmp/srv_ready ])",
+      "Bash(node_modules/.bin/ng build *)",
+      "Bash(powershell.exe -NoProfile -Command \"Get-Content 'C:\\\\Users\\\\rawatv\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-rawatv-OneDrive---Kirkland-Desktop-Vivek-Learning-AI-Learning-AIMeridianStudio-MeridianStudio-UI\\\\40c892f4-3c80-45f6-8a93-9a7db3e73a08\\\\tasks\\\\bscw8zky1.output' -Raw\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); const p='c:/Users/rawatv/OneDrive - Kirkland/Desktop/Vivek/Learning/AI Learning/AIMeridianStudio/MeridianStudio.UI/dist/meridian-studio-ui/browser'; const files=fs.readdirSync\\(p\\); console.log\\(files.join\\('\\\\n'\\)\\); const stat=fs.statSync\\(p+'/main.js'\\); console.log\\('main.js size:', stat.size, 'bytes, modified:', stat.mtime.toISOString\\(\\)\\);\")",
+      "Bash(node \"c:/Users/rawatv/AppData/Local/Temp/meridian-capture.js\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); const css=fs.readFileSync\\('c:/Users/rawatv/OneDrive - Kirkland/Desktop/Vivek/Learning/AI Learning/AIMeridianStudio/MeridianStudio.UI/dist/meridian-studio-ui/browser/styles.css','utf8'\\); console.log\\('Size:', css.length, 'bytes'\\); console.log\\('Has flex?', css.includes\\('.flex'\\)\\); console.log\\('Has bg-gray-950?', css.includes\\('bg-gray-950'\\)||css.includes\\('--color-gray-950'\\)||css.includes\\('oklch'\\)\\); console.log\\('First 500 chars:', css.slice\\(0,500\\)\\);\")",
+      "Bash(powershell.exe -NoProfile -Command ' *)",
+      "Bash(node -e \"console.log\\(require\\('c:/Users/rawatv/OneDrive - Kirkland/Desktop/Vivek/Learning/AI Learning/AIMeridianStudio/MeridianStudio.UI/node_modules/@tailwindcss/postcss/package.json'\\).version\\)\")",
+      "Bash(node \"c:/Users/rawatv/AppData/Local/Temp/capture-demo.js\")",
+      "Bash(find \"c:/Users/rawatv/OneDrive - Kirkland/Desktop/Vivek/Learning/AI Learning/AIMeridianStudio/MeridianStudio.API\" -type f -name \"*.cs\" | grep -v \"/obj/\" | grep -v \"/bin/\" | sort)",
+      "Read(//c/Users/rawatv/OneDrive - Kirkland/Desktop/Vivek/Learning/AI Learning/AIMeridianStudio/MeridianStudio.API/**)",
+      "Bash(dotnet build *)",
+      "Bash(npx tsc *)",
+      "Read(//c/Users/rawatv/OneDrive - Kirkland/Desktop/Vivek/Learning/AI Learning/AIMeridianStudio/**)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\rawatv\\AppData\\Local\\Temp",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.API\\Domain\\Models",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.API\\Infrastructure\\LLM",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.API\\Application\\Services",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.API\\Infrastructure\\ExampleBank",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.API\\Application\\Contracts",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.API\\Application\\Interfaces",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.API\\API\\Endpoints",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\MeridianStudio.API",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio\\docs\\ADR",
+      "c:\\Users\\rawatv\\OneDrive - Kirkland\\Desktop\\Vivek\\Learning\\AI Learning\\AIMeridianStudio"
+    ]
+  }
+}

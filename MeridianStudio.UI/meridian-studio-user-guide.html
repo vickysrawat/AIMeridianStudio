@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeridianStudio — User Guide</title>
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --primary-light: #e0e7ff;
+      --secondary: #0ea5e9;
+      --accent: #8b5cf6;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface2: #273549;
+      --border: #334155;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #0c1a2e 0%, #0f172a 60%, #1a1040 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 2rem 2rem;
+      position: relative; overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 40%, rgba(139,92,246,.12) 0%, transparent 55%),
+                  radial-gradient(ellipse at 20% 60%, rgba(14,165,233,.08) 0%, transparent 50%);
+    }
+    header .inner { max-width: 1100px; margin: 0 auto; position: relative; }
+    .badge {
+      display: inline-block;
+      background: rgba(139,92,246,.2);
+      color: #c4b5fd;
+      border: 1px solid rgba(139,92,246,.4);
+      border-radius: 99px;
+      padding: .25rem .75rem;
+      font-size: .75rem; letter-spacing: .05em; text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem; font-weight: 800;
+      background: linear-gradient(135deg, #c4b5fd, #e0f2fe, #a5b4fc);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: .5rem;
+    }
+    header .tagline { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; }
+    /* ── LAYOUT ── */
+    .container { display: flex; max-width: 1200px; margin: 0 auto; }
+    /* ── SIDEBAR NAV ── */
+    aside {
+      width: 240px; flex-shrink: 0;
+      position: sticky; top: 0; height: 100vh;
+      overflow-y: auto;
+      border-right: 1px solid var(--border);
+      padding: 2rem 1rem;
+    }
+    aside h3 {
+      font-size: .7rem; text-transform: uppercase; letter-spacing: .1em;
+      color: var(--text-subtle); margin-bottom: .75rem; padding: 0 .5rem;
+    }
+    aside ul { list-style: none; padding: 0; margin-bottom: 1.5rem; }
+    aside ul li a {
+      display: block;
+      padding: .4rem .5rem;
+      font-size: .875rem; color: var(--text-muted);
+      text-decoration: none; border-radius: 6px;
+      transition: background .15s, color .15s;
+    }
+    aside ul li a:hover { background: var(--surface2); color: #a5b4fc; }
+    aside ul.sub a { padding-left: 1.25rem; font-size: .8rem; }
+    /* ── MAIN CONTENT ── */
+    main { flex: 1; padding: 2.5rem 2.5rem 4rem; min-width: 0; }
+    section { margin-bottom: 3.5rem; scroll-margin-top: 2rem; }
+    section > h2 {
+      display: flex; align-items: center; gap: .6rem;
+      font-size: 1.5rem; font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 1.5rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .icon-box {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    h3 {
+      font-size: 1.1rem; font-weight: 600; color: #cbd5e1;
+      margin: 1.75rem 0 .75rem;
+    }
+    h4 { font-size: 1rem; font-weight: 600; color: #94a3b8; margin: 1rem 0 .5rem; }
+    p { color: var(--text-muted); margin-bottom: .9rem; }
+    ul, ol { color: var(--text-muted); padding-left: 1.5rem; margin-bottom: .9rem; }
+    li { margin-bottom: .4rem; }
+    strong { color: var(--text); }
+    a { color: #a5b4fc; }
+    /* ── STEPS ── */
+    .steps { counter-reset: step; }
+    .step {
+      display: flex; gap: 1rem;
+      margin-bottom: 1.5rem;
+      counter-increment: step;
+    }
+    .step-num {
+      width: 32px; height: 32px; flex-shrink: 0;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem; font-weight: 700; color: white;
+    }
+    .step-num::before { content: counter(step); }
+    .step-body { flex: 1; padding-top: .3rem; }
+    .step-body strong { display: block; color: var(--text); margin-bottom: .3rem; }
+    .step-body p { margin: 0; font-size: .9rem; }
+    /* ── CALLOUTS ── */
+    .callout {
+      display: flex; gap: .75rem;
+      border-left: 3px solid var(--primary);
+      background: rgba(99,102,241,.08);
+      border-radius: 0 8px 8px 0;
+      padding: .9rem 1rem;
+      margin: 1rem 0;
+      font-size: .9rem; color: var(--text-muted);
+    }
+    .callout .ci { font-size: 1.1rem; flex-shrink: 0; }
+    .callout.tip { border-color: var(--success); background: rgba(16,185,129,.08); }
+    .callout.warning { border-color: var(--warning); background: rgba(245,158,11,.08); }
+    .callout.info { border-color: var(--secondary); background: rgba(14,165,233,.08); }
+    /* ── CARDS ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem; margin-bottom: 1rem;
+    }
+    .module-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: border-color .2s;
+    }
+    .module-card:hover { border-color: var(--primary); }
+    .module-card .mc-icon { font-size: 1.5rem; margin-bottom: .6rem; }
+    .module-card h4 { margin: 0 0 .4rem; color: #e2e8f0; font-size: .95rem; }
+    .module-card p { margin: 0; font-size: .82rem; }
+    /* ── CODE ── */
+    code {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: .1rem .4rem;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: .8em; color: #a5b4fc;
+    }
+    pre {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: .82rem; color: #a5b4fc;
+      margin-bottom: 1rem;
+    }
+    /* ── SCREENSHOT PLACEHOLDER ── */
+    .screenshot {
+      background: var(--surface2);
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: var(--text-subtle);
+      font-size: .875rem;
+      margin: 1rem 0;
+    }
+    .screenshot::before { display: block; font-size: 2rem; margin-bottom: .5rem; content: '📸'; }
+    /* ── FAQ ── */
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.25rem;
+      margin-bottom: .75rem;
+    }
+    .faq-item .q {
+      font-weight: 600; color: #e2e8f0;
+      margin-bottom: .5rem;
+      display: flex; align-items: flex-start; gap: .5rem;
+    }
+    .faq-item .q::before {
+      content: 'Q';
+      background: var(--primary); color: white;
+      font-size: .7rem; font-weight: 800;
+      border-radius: 4px; padding: .1rem .35rem;
+      flex-shrink: 0; margin-top: .1rem;
+    }
+    .faq-item .a { font-size: .9rem; color: var(--text-muted); padding-left: 1.5rem; }
+    /* ── TABLE ── */
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+    th {
+      background: var(--surface2); text-align: left;
+      padding: .6rem 1rem;
+      font-size: .8rem; text-transform: uppercase; letter-spacing: .06em;
+      color: var(--text-subtle); border: 1px solid var(--border);
+    }
+    td {
+      padding: .7rem 1rem; border: 1px solid var(--border);
+      font-size: .875rem; color: var(--text-muted); vertical-align: top;
+    }
+    tr:hover td { background: rgba(255,255,255,.02); }
+    /* ── WORKFLOW DIAGRAM ── */
+    .workflow {
+      display: flex; align-items: center;
+      gap: 0; flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+    .wf-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: .75rem 1rem;
+      text-align: center;
+      min-width: 120px;
+    }
+    .wf-step .ws-icon { font-size: 1.3rem; display: block; margin-bottom: .25rem; }
+    .wf-step .ws-name { font-size: .8rem; font-weight: 600; color: #e2e8f0; }
+    .wf-step .ws-sub { font-size: .7rem; color: var(--text-subtle); margin-top: .1rem; }
+    .wf-arrow { color: var(--text-subtle); font-size: 1.4rem; padding: 0 .5rem; }
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-subtle); font-size: .8rem;
+    }
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      aside { width: 100%; height: auto; position: static; border-right: none; border-bottom: 1px solid var(--border); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <div class="badge">User Guide — v0.0.1</div>
+    <h1>MeridianStudio User Guide</h1>
+    <p class="tagline">Step-by-step instructions for using every feature of the AI Solution Agent &amp; System Architect Hub</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside>
+    <h3>Getting Started</h3>
+    <ul>
+      <li><a href="#overview">What is MeridianStudio?</a></li>
+      <li><a href="#first-run">First Run Setup</a></li>
+      <li><a href="#interface">Interface Overview</a></li>
+    </ul>
+    <h3>Core Workflows</h3>
+    <ul>
+      <li><a href="#trends">1 — Trends Discovery</a></li>
+      <li><a href="#blueprint">2 — Architectural Blueprinter</a></li>
+      <li><a href="#pipeline">3 — Execution Pipeline</a></li>
+      <li><a href="#documents">4 — Document Studio</a></li>
+      <li><a href="#prompts">5 — Prompt Studio</a></li>
+      <li><a href="#slides">6 — Executive Slides</a></li>
+    </ul>
+    <h3>Reference</h3>
+    <ul>
+      <li><a href="#model-status">Model Status Panel</a></li>
+      <li><a href="#domain-settings">Domain Settings</a></li>
+      <li><a href="#keyboard">Keyboard Shortcuts</a></li>
+      <li><a href="#troubleshooting">Troubleshooting</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <h2><span class="icon-box">🌟</span> What is MeridianStudio?</h2>
+      <p>
+        MeridianStudio is an <strong>AI-orchestrated workspace</strong> that guides you through a complete
+        product intelligence and architecture workflow — from initial market research to stakeholder-ready
+        documents — without switching tools.
+      </p>
+      <p>The platform chains six intelligent modules together:</p>
+      <div class="workflow">
+        <div class="wf-step">
+          <span class="ws-icon">🔍</span>
+          <div class="ws-name">Trends Discovery</div>
+          <div class="ws-sub">Market research</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <span class="ws-icon">🏗️</span>
+          <div class="ws-name">Blueprinter</div>
+          <div class="ws-sub">System architecture</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <span class="ws-icon">⚙️</span>
+          <div class="ws-name">Execution</div>
+          <div class="ws-sub">Task simulation</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <span class="ws-icon">📄</span>
+          <div class="ws-name">Documents</div>
+          <div class="ws-sub">Stakeholder docs</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <span class="ws-icon">💬</span>
+          <div class="ws-name">Prompts</div>
+          <div class="ws-sub">LLM handoff</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <span class="ws-icon">📊</span>
+          <div class="ws-name">Slides</div>
+          <div class="ws-sub">PowerPoint export</div>
+        </div>
+      </div>
+      <div class="callout tip">
+        <span class="ci">💡</span>
+        <div>MeridianStudio works fully offline — no API keys needed. The built-in Heuristic Engine covers
+        all 9 industry verticals and gives deterministic results every time.</div>
+      </div>
+    </section>
+
+    <!-- FIRST RUN -->
+    <section id="first-run">
+      <h2><span class="icon-box">🚀</span> First Run Setup</h2>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li><strong>Node.js 20+</strong> — for the Angular frontend</li>
+        <li><strong>.NET 10 SDK</strong> — for the API backend</li>
+        <li>A modern browser (Chrome, Edge, Firefox)</li>
+      </ul>
+
+      <h3>Start the Application</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Start the API server</strong>
+            <p>Open a terminal in the <code>MeridianStudio.API/</code> folder and run:</p>
+            <pre>dotnet run --project MeridianStudio.API.csproj --launch-profile http</pre>
+            <p>The API will be available at <code>http://localhost:5000</code>. You should see startup logs in the terminal.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Start the UI</strong>
+            <p>Open a second terminal in the <code>MeridianStudio.UI/</code> folder and run:</p>
+            <pre>npm start</pre>
+            <p>Wait for <em>"Application bundle generation complete"</em>, then open <code>http://localhost:4200</code> in your browser.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Verify the connection</strong>
+            <p>The workspace header should show a green model-status indicator. If it shows a connection warning,
+            confirm the API is running on port 5000.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Optional: Add LLM API Keys</h3>
+      <p>Without keys the Heuristic Engine handles all requests. To enable live AI responses:</p>
+      <pre>cd MeridianStudio.API
+dotnet user-secrets set "LLM:Gemini:ApiKey" "AIza..."
+dotnet user-secrets set "LLM:Groq:ApiKey"   "gsk_..."
+dotnet user-secrets set "LLM:Claude:ApiKey" "sk-ant-..."</pre>
+      <div class="callout warning">
+        <span class="ci">⚠️</span>
+        <div>Restart the API server after setting secrets for the changes to take effect.</div>
+      </div>
+    </section>
+
+    <!-- INTERFACE -->
+    <section id="interface">
+      <h2><span class="icon-box">🖥️</span> Interface Overview</h2>
+      <div class="screenshot">[Screenshot: Workspace main view showing module tabs, model status bar, and results panel]</div>
+
+      <h3>Main Areas</h3>
+      <div class="card-grid">
+        <div class="module-card">
+          <div class="mc-icon">🗂️</div>
+          <h4>Module Tabs</h4>
+          <p>The left or top navigation tabs switch between the six workflow modules. Each module is independent — you can use them in any order.</p>
+        </div>
+        <div class="module-card">
+          <div class="mc-icon">📡</div>
+          <h4>Model Status Bar</h4>
+          <p>Live indicator showing which AI model is currently processing your request. Turns amber during a fallback cascade.</p>
+        </div>
+        <div class="module-card">
+          <div class="mc-icon">📋</div>
+          <h4>Results Panel</h4>
+          <p>Displays structured output from each module — cards, Markdown, code blocks, or logs depending on the module.</p>
+        </div>
+        <div class="module-card">
+          <div class="mc-icon">⚙️</div>
+          <h4>Domain Settings</h4>
+          <p>Configure default industry vertical and other workspace preferences that persist across sessions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRENDS DISCOVERY -->
+    <section id="trends">
+      <h2><span class="icon-box">🔍</span> Module 1 — Trends Discovery</h2>
+      <p>
+        Trends Discovery performs AI-powered market research. Enter industry keywords and receive
+        a curated set of solution opportunities, domain context, and competitor insights.
+      </p>
+      <div class="screenshot">[Screenshot: Trends Discovery panel with keyword input, domain label, and 5 solution cards]</div>
+
+      <h3>Basic Research Workflow</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Enter keywords</strong>
+            <p>Type one or more industry keywords into the search field (e.g. <em>"healthcare AI"</em>, <em>"fintech compliance"</em>, <em>"e-commerce fulfillment"</em>). The system auto-detects the industry vertical.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Submit the research request</strong>
+            <p>Click <strong>Discover</strong> (or press Enter). The Model Status bar shows which AI provider is processing the request.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Review the results</strong>
+            <p>Results appear in three sections:</p>
+            <ul>
+              <li><strong>Domain</strong> — auto-detected industry vertical and sub-domains list</li>
+              <li><strong>Solution Items</strong> — 5 prioritised opportunities, each with urgency, difficulty, value scores, rationale, real-life value, and integration steps</li>
+              <li><strong>Competitor Insights</strong> — 4 competitor analyses with feature gap and strategic playbook</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Select a solution to continue</strong>
+            <p>Click any solution card to carry it forward to the Architectural Blueprinter module.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Advanced Options</h3>
+      <table>
+        <thead><tr><th>Action</th><th>How to</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Load more results</td>
+            <td>Click <strong>Load More</strong></td>
+            <td>Returns 5 additional solutions not already shown (bypasses cache)</td>
+          </tr>
+          <tr>
+            <td>Regenerate from scratch</td>
+            <td>Click <strong>Re-run</strong></td>
+            <td>Evicts server cache and generates a completely fresh result set</td>
+          </tr>
+          <tr>
+            <td>Refine with feedback</td>
+            <td>Type in the feedback field before re-running</td>
+            <td>AI incorporates your feedback into the next generation</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Understanding Solution Scores</h3>
+      <table>
+        <thead><tr><th>Field</th><th>Range</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Urgency</td><td>1–10</td><td>How time-sensitive the market need is</td></tr>
+          <tr><td>Difficulty</td><td>1–10</td><td>Implementation complexity (higher = harder)</td></tr>
+          <tr><td>Value</td><td>1–10</td><td>Strategic and business value of the solution</td></tr>
+        </tbody>
+      </table>
+      <div class="callout tip">
+        <span class="ci">💡</span>
+        <div>Solutions with high Value + low Difficulty are your best quick-win opportunities. High Urgency + high Value indicates a strategic priority worth immediate investment.</div>
+      </div>
+    </section>
+
+    <!-- BLUEPRINTER -->
+    <section id="blueprint">
+      <h2><span class="icon-box">🏗️</span> Module 2 — Architectural Blueprinter</h2>
+      <p>
+        Given a selected solution, the Blueprinter generates a complete system architecture with five structured sections,
+        all formatted as rendered Markdown.
+      </p>
+      <div class="screenshot">[Screenshot: Blueprint panel showing Core Scenario, Base Topology with ASCII diagram, and Database Schemas tabs]</div>
+
+      <h3>Generating a Blueprint</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Carry a solution from Trends Discovery</strong>
+            <p>Select a solution card in Trends Discovery. Its name and ID populate automatically in the Blueprinter panel. Alternatively, enter a solution name and ID manually.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Confirm the domain (optional)</strong>
+            <p>The domain detected during research is pre-filled. You can override it to change the architectural context.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Click Generate Blueprint</strong>
+            <p>Blueprint generation typically takes 5–15 seconds with live models, or under 1 second with the Heuristic Engine.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Navigate blueprint sections</strong>
+            <p>Use the section tabs to explore the five blueprint components:</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Blueprint Sections</h3>
+      <div class="card-grid">
+        <div class="module-card">
+          <div class="mc-icon">📖</div>
+          <h4>Core Scenario</h4>
+          <p>300+ word narrative describing the business context, user journeys, and integration goals of the solution.</p>
+        </div>
+        <div class="module-card">
+          <div class="mc-icon">🗺️</div>
+          <h4>Base Topology</h4>
+          <p>ASCII architecture diagram showing services, data flows, and infrastructure components.</p>
+        </div>
+        <div class="module-card">
+          <div class="mc-icon">🗄️</div>
+          <h4>Database Schemas</h4>
+          <p>SQL CREATE TABLE statements for the primary data entities, with indexes and foreign keys.</p>
+        </div>
+        <div class="module-card">
+          <div class="mc-icon">📡</div>
+          <h4>Endpoint Manifest</h4>
+          <p>Full REST API specification in Markdown table format — method, path, request/response shapes.</p>
+        </div>
+        <div class="module-card">
+          <div class="mc-icon">🛡️</div>
+          <h4>Resilience Strategies</h4>
+          <p>Multi-model cascade configuration, circuit breaker patterns, retry policies, and fallback strategies.</p>
+        </div>
+      </div>
+      <div class="callout info">
+        <span class="ci">ℹ️</span>
+        <div>The Blueprint ID is required when generating documents in Document Studio. Copy it from the blueprint header before switching modules.</div>
+      </div>
+    </section>
+
+    <!-- EXECUTION PIPELINE -->
+    <section id="pipeline">
+      <h2><span class="icon-box">⚙️</span> Module 3 — Execution Pipeline</h2>
+      <p>
+        The Execution Pipeline simulates the engineering work required to build a solution component.
+        It produces real-time progress logs, a C# 13 code template, and a 0–100 progress score.
+      </p>
+      <div class="screenshot">[Screenshot: Execution Pipeline showing task name input, real-time log stream, progress score gauge, and code template panel]</div>
+
+      <h3>Running a Task</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Enter the task name</strong>
+            <p>Type a descriptive engineering task, e.g. <em>"Build FHIR Ingestion Pipeline"</em> or <em>"Implement AML Transaction Scoring Service"</em>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Fill optional context fields</strong>
+            <p><strong>Systemic Value</strong> — the business impact of this task. <strong>Estimated Effort</strong> — sprint estimate (e.g. "3–5 sprints"). <strong>Context</strong> — additional detail for the AI.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Click Execute Task</strong>
+            <p>The log panel streams timestamped events as the Meridian Task Executor processes the request. Logs typically span 8–12 seconds of simulated execution time.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Review outputs</strong>
+            <p>Once complete, the panel shows a progress score (0–100), a status badge (<em>Completed</em>), and a generated C# 13 service class template ready to copy.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Understanding the Execution Logs</h3>
+      <p>Each log entry has the format: <code>[{elapsed}ms] {level} — {message}</code></p>
+      <table>
+        <thead><tr><th>Level</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>INFO</td><td>Normal progress — initialisation, parsing, processing stages</td></tr>
+          <tr><td>SUCCESS</td><td>Task completed — final line always shows the progress score</td></tr>
+          <tr><td>WARN</td><td>Non-blocking issue encountered — fallback was used</td></tr>
+          <tr><td>ERROR</td><td>A stage failed — partial output may still be available</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- DOCUMENT STUDIO -->
+    <section id="documents">
+      <h2><span class="icon-box">📄</span> Module 4 — Document Studio</h2>
+      <p>
+        Document Studio generates polished, stakeholder-ready documents from an existing blueprint.
+        Four document types are supported, each tailored to a different audience.
+      </p>
+      <div class="screenshot">[Screenshot: Document Studio with blueprint ID field, template type dropdown, and rendered document preview]</div>
+
+      <h3>Generating a Document</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Enter the Blueprint ID</strong>
+            <p>Copy the Blueprint ID from the Blueprinter module header (e.g. <code>abc123def456</code>). This links the document to a specific architecture context.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Set the document title</strong>
+            <p>Enter a descriptive title such as <em>"AI Patient Diagnostic Pipeline — Executive Summary"</em>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Choose a template type</strong>
+            <p>Select one of the four available templates from the dropdown (see table below).</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Generate and review</strong>
+            <p>Click <strong>Generate Document</strong>. The Markdown document renders in the preview panel. Use the copy button to export the raw Markdown.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Document Template Types</h3>
+      <table>
+        <thead><tr><th>Template</th><th>Audience</th><th>Key Sections</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Executive Summary</td>
+            <td>C-suite, Board</td>
+            <td>Problem, Solution Overview, ROI, Next Steps</td>
+          </tr>
+          <tr>
+            <td>Market Analysis</td>
+            <td>Product, Strategy</td>
+            <td>Market Size, Competitor Landscape, Opportunity Matrix</td>
+          </tr>
+          <tr>
+            <td>Technical Specification</td>
+            <td>Engineering, Architecture</td>
+            <td>System Design, API Contracts, Data Models, NFRs</td>
+          </tr>
+          <tr>
+            <td>Proposal</td>
+            <td>Clients, Stakeholders</td>
+            <td>Business Case, Solution Approach, Timeline, Investment</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout tip">
+        <span class="ci">💡</span>
+        <div>Generate all four document types from the same Blueprint ID to produce a complete documentation suite for a solution — no duplicate effort required.</div>
+      </div>
+    </section>
+
+    <!-- PROMPT STUDIO -->
+    <section id="prompts">
+      <h2><span class="icon-box">💬</span> Module 5 — Prompt Studio</h2>
+      <p>
+        Prompt Studio generates developer-ready LLM handoff prompts for any component in your system blueprint.
+        Each prompt includes structured directives, a context summary, and quality gates.
+      </p>
+      <div class="screenshot">[Screenshot: Prompt Studio with component name field, target LLM selector, and generated prompt with directive sections]</div>
+
+      <h3>Generating a Prompt</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Name the component</strong>
+            <p>Enter the exact component or service name from your blueprint, e.g. <em>"FHIR Ingestion Service"</em>, <em>"AML Transaction Scorer"</em>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Select the target LLM (optional)</strong>
+            <p>Choose <em>Claude Sonnet</em>, <em>Gemini</em>, or <em>Groq</em>. The prompt is optimised for the selected model's strengths and context window.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Add context (optional)</strong>
+            <p>Paste relevant snippets — schema, endpoint list, tech constraints — to make the generated prompt more specific.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Generate and hand off</strong>
+            <p>Copy the <strong>Prompt Text</strong> and paste it directly into your chosen AI tool. The <strong>Directives</strong> block appears separately for quick reference.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Prompt Structure</h3>
+      <p>Every generated prompt contains:</p>
+      <ul>
+        <li><strong>Header</strong> — component name, target LLM, generation timestamp</li>
+        <li><strong>Context Summary</strong> — role of the component in the overall system</li>
+        <li><strong>Functional Requirements</strong> — numbered list of capabilities to implement</li>
+        <li><strong>Directives</strong> — named quality gates (COMPLETENESS, SAFETY, PERFORMANCE, etc.)</li>
+        <li><strong>Output Format</strong> — expected deliverable structure</li>
+      </ul>
+    </section>
+
+    <!-- EXECUTIVE SLIDES -->
+    <section id="slides">
+      <h2><span class="icon-box">📊</span> Module 6 — Executive Slides</h2>
+      <p>
+        Executive Slides exports your workspace findings as a PowerPoint presentation (.pptx)
+        suitable for stakeholder delivery. Slides are generated from the current workspace state —
+        research results, blueprint highlights, and document extracts.
+      </p>
+      <div class="screenshot">[Screenshot: Executive Slides module with slide preview thumbnails and Export to PPTX button]</div>
+
+      <h3>Exporting Slides</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Ensure workspace data is populated</strong>
+            <p>Run Trends Discovery and (optionally) generate a Blueprint before exporting. The slides module pulls from whatever is currently in the workspace.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Open Executive Slides</strong>
+            <p>Click the <strong>Executive Slides</strong> tab. A slide preview shows the generated deck.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <strong>Click Export to PPTX</strong>
+            <p>The browser downloads a <code>.pptx</code> file generated client-side via pptxgenjs. No server round-trip required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODEL STATUS -->
+    <section id="model-status">
+      <h2><span class="icon-box">📡</span> Model Status Panel</h2>
+      <p>
+        The Model Status panel (visible in the workspace header) shows real-time LLM routing events
+        via a persistent SSE connection. You never need to refresh — it updates automatically.
+      </p>
+
+      <h3>Status Indicators</h3>
+      <table>
+        <thead><tr><th>Indicator</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>🟢 Connected</td><td>SSE stream established; ready to receive events</td></tr>
+          <tr><td>🔵 Attempting</td><td>Orchestrator is calling a specific AI provider</td></tr>
+          <tr><td>✅ Succeeded</td><td>Provider returned a valid response</td></tr>
+          <tr><td>🟠 Failed / Rotating</td><td>Provider returned an error; promoting to next tier</td></tr>
+          <tr><td>⚡ Fallback Active</td><td>All live providers failed; Heuristic Engine is responding</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Model Cascade Order</h3>
+      <ol>
+        <li><strong>Gemini 2.5 Flash</strong> — fastest, lowest cost, attempted first</li>
+        <li><strong>Groq llama-3.3-70b</strong> — high-capacity fallback</li>
+        <li><strong>Claude Sonnet 4.6</strong> — premium quality fallback</li>
+        <li><strong>Heuristic Engine (Offline)</strong> — always available, deterministic</li>
+      </ol>
+      <div class="callout info">
+        <span class="ci">ℹ️</span>
+        <div>The <code>modelUsed</code> value shown on each result card tells you exactly which tier produced that specific response.</div>
+      </div>
+    </section>
+
+    <!-- DOMAIN SETTINGS -->
+    <section id="domain-settings">
+      <h2><span class="icon-box">⚙️</span> Domain Settings</h2>
+      <p>
+        Domain Settings lets you configure workspace-level preferences that carry across modules.
+      </p>
+      <h3>Available Settings</h3>
+      <ul>
+        <li><strong>Default Industry Vertical</strong> — pre-selects a domain so you don't need to enter keywords every time</li>
+        <li><strong>Preferred Model</strong> — hint the cascade to start from a specific provider (if configured)</li>
+        <li><strong>Workspace name</strong> — label for the current session's exported artefacts</li>
+      </ul>
+      <div class="callout warning">
+        <span class="ci">⚠️</span>
+        <div>Domain Settings are currently workspace-scoped and reset when the browser tab is closed. Persistent user profiles are planned for a future release.</div>
+      </div>
+    </section>
+
+    <!-- KEYBOARD SHORTCUTS -->
+    <section id="keyboard">
+      <h2><span class="icon-box">⌨️</span> Keyboard Shortcuts</h2>
+      <table>
+        <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><code>Enter</code></td><td>Submit the active input form (search, task name, etc.)</td></tr>
+          <tr><td><code>Ctrl + C</code></td><td>Copy selected result text to clipboard</td></tr>
+          <tr><td><code>Tab</code></td><td>Move between module sections within a panel</td></tr>
+          <tr><td><code>Esc</code></td><td>Close any open modal or dismiss a notification</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- TROUBLESHOOTING -->
+    <section id="troubleshooting">
+      <h2><span class="icon-box">🔧</span> Troubleshooting</h2>
+
+      <h3>Application won't load</h3>
+      <ul>
+        <li>Confirm both the API (<code>http://localhost:5000</code>) and UI (<code>http://localhost:4200</code>) servers are running</li>
+        <li>Check the terminal for startup errors — the most common cause is a port conflict</li>
+        <li>Try a hard refresh (<code>Ctrl+Shift+R</code>) to clear cached Angular assets</li>
+      </ul>
+
+      <h3>Model Status shows "Disconnected"</h3>
+      <ul>
+        <li>The API SSE endpoint (<code>GET /api/events/model-status</code>) is unreachable</li>
+        <li>Restart the API server — it may have crashed or timed out</li>
+        <li>Check that no proxy or firewall is blocking long-lived HTTP connections</li>
+      </ul>
+
+      <h3>Research returns "Heuristic Engine (Offline)" when I have API keys</h3>
+      <ul>
+        <li>Ensure you restarted the API server after setting secrets with <code>dotnet user-secrets set</code></li>
+        <li>Verify the key is valid and has remaining quota with the provider</li>
+        <li>Check the Model Status panel — the <code>failed</code> event will name which provider errored</li>
+      </ul>
+
+      <h3>Blueprint or Document generation is very slow</h3>
+      <ul>
+        <li>Live model calls (Gemini, Groq, Claude) take 5–20 seconds depending on load and quota</li>
+        <li>If the cascade has rotated to Claude Sonnet, it generates longer, higher-quality output — extra latency is expected</li>
+        <li>To skip live models entirely, remove API keys so the Heuristic Engine responds immediately</li>
+      </ul>
+
+      <h3>PowerPoint export is empty or malformed</h3>
+      <ul>
+        <li>Ensure Trends Discovery has been run at least once before exporting slides</li>
+        <li>Try re-running research, then re-open Executive Slides</li>
+        <li>Check the browser console for pptxgenjs errors</li>
+      </ul>
+
+      <h3>Scalar UI shows errors</h3>
+      <ul>
+        <li>Open <code>http://localhost:5000/openapi/v1.json</code> directly — if this returns an error, the API itself has a startup problem</li>
+        <li>Review the API terminal for exception stack traces</li>
+      </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2><span class="icon-box">❓</span> Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="q">Does MeridianStudio send my data to external servers?</div>
+        <div class="a">Only when live AI API keys are configured and used. In offline/Heuristic mode all processing is local. When live keys are active, your keywords and solution names are sent to the respective provider (Gemini, Groq, or Claude) to generate responses.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">Can I use MeridianStudio without an internet connection?</div>
+        <div class="a">Yes — the Heuristic Engine runs entirely locally and covers all 9 industry verticals. Simply do not configure any LLM API keys and the app operates fully offline.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">Why do I always get the same research results for the same keyword?</div>
+        <div class="a">Results are cached server-side per keyword. Click <strong>Re-run</strong> to evict the cache and regenerate from scratch, or use <strong>Load More</strong> to fetch additional items that avoid duplicates.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">How many solution items can I get from one research request?</div>
+        <div class="a">Page 1 always returns exactly 5 items. Each click of <strong>Load More</strong> adds another 5 unique items. There is no hard cap, but results may become less differentiated after 20–30 total items.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">Can I generate multiple blueprints from the same research session?</div>
+        <div class="a">Yes — click different solution cards to generate separate blueprints. Each blueprint has its own unique ID and can be used independently in Document Studio and Prompt Studio.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">What does the progress score in the Execution Pipeline mean?</div>
+        <div class="a">It is a simulated 0–100 score representing how completely the Meridian Task Executor was able to address the engineering task. A score of 100 means all task phases completed without errors. The score does not reflect real code quality — it reflects the completeness of the simulated execution model.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">Which AI model writes the best blueprints?</div>
+        <div class="a">The primary model for blueprint generation is Groq llama-3.3-70b, which produces detailed ASCII topology diagrams and SQL schemas efficiently. Claude Sonnet tends to produce more narrative-rich content when it's used as a fallback. Both are significantly richer than the Heuristic Engine for custom domains.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">How do I use the generated C# code templates from the Execution Pipeline?</div>
+        <div class="a">Copy the template from the code panel and paste it into your .NET project. The templates target C# 13 with .NET 10 patterns (sealed records, primary constructors). They are starting scaffolds — they require project-specific wiring, dependency injection registration, and testing before production use.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">Is there a way to save my workspace between sessions?</div>
+        <div class="a">Currently, workspace state is held in-memory and resets when the browser tab is closed. Export your results before closing — use the PPTX export for slides, copy Markdown from Document Studio, and copy code templates from the Execution Pipeline. Persistent session storage is planned for a future release.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">Can I run multiple industry verticals in one session?</div>
+        <div class="a">Yes — simply change the keyword in Trends Discovery and run a new search. Each search is independent. You can have results from different verticals visible in the same workspace by using Load More with different keyword searches, though the interface treats the latest research result as the active context for Blueprinter and Document Studio.</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  MeridianStudio v0.0.1 — User Guide &nbsp;·&nbsp; Generated June 2026 &nbsp;·&nbsp;
+  Content derived from CLAUDE.md &amp; source code &nbsp;·&nbsp; Internal use only
+</footer>
+
+</body>
+</html>

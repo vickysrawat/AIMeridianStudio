@@ -1,0 +1,100 @@
+[
+  {
+    "title": "Multi-Cloud Strategy Blueprint",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "The primary goal is to validate the proposed federated multi-cloud model, ensuring it effectively extends existing Azure governance to new hyperscalers. Success means stakeholders understand and endorse the architectural approach for specialized AI/ML and data workloads, confirming its alignment with strategic objectives.",
+    "criteriaUsed": [
+      "The proposed architecture clearly defines integration points and responsibilities across hyperscalers.",
+      "Security and compliance controls are consistently applied and extend effectively to new cloud providers.",
+      "The solution demonstrates a clear path for achieving workload portability and data sovereignty.",
+      "Performance and scalability requirements for AI/ML and data workloads are adequately addressed.",
+      "Does it include epics with user stories in As-a / I-want / So-that format?",
+      "Does it list third-party dependencies with test-double substitution guidance?",
+      "Does it document design patterns applied and why each was chosen?"
+    ],
+    "excerpt": "# Multi-Cloud Strategy Blueprint\n\nThis handbook details the Multi-Cloud Strategy Blueprint, a critical initiative designed to extend our robust Azure governance and platform engineering capabilities to a federated multi-cloud environment. It is intended for onboarding engineers and mid-level developers, providing a comprehensive understanding of the architectural foresight and strategic rationale behind this evolution. The primary goal is to validate the proposed federated multi-cloud model, ensuring it effectively extends existing Azure governance to new hyperscalers. Success means stakeholders understand and endorse the architectural approach for specialized AI/ML and data workloads, confirming its alignment with strategic objectives.\n\n## 1. Executive Summary: Strategic Imperative for Multi-Cloud Adoption\n\nThe \u0027Multi-Cloud Strategy \u0026 Execution Assessment\u0027 identifies a pressing need to augment our current single-hyperscaler Azure foundation. While Azure provides a mature and well-gove...",
+    "goalAchievementPct": 100,
+    "iterationsUsed": 2,
+    "wasRefined": false,
+    "createdAt": "2026-06-27T08:57:01.5161534\u002B00:00"
+  },
+  {
+    "title": "Multi-Cloud Strategy Blueprint",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "The primary goal is to equip mid-level developers with the essential knowledge and practical steps to effectively contribute to and operate within the new federated multi-cloud environment. Success means developers can confidently deploy and manage workloads across Azure and integrated hyperscalers, understanding the architectural implications and governance model.",
+    "criteriaUsed": [
+      "All architectural diagrams and code examples are accurate and directly applicable to the federated multi-cloud model.",
+      "Procedures for deploying and managing AI/ML workloads across hyperscalers are clearly articulated and actionable.",
+      "The document provides sufficient detail for a mid-level developer to perform common multi-cloud tasks without external assistance.",
+      "Navigation and information retrieval are intuitive, allowing quick access to relevant multi-cloud patterns and best practices.",
+      "Sequence diagram",
+      "Does it include epics with user stories in As-a / I-want / So-that format?",
+      "Does it list third-party dependencies with test-double substitution guidance?",
+      "Does it document design patterns applied and why each was chosen?"
+    ],
+    "excerpt": "# Multi-Cloud Strategy Blueprint\n\nThis handbook provides mid-level developers and onboarding engineers with essential knowledge and practical steps to effectively contribute to and operate within our new federated multi-cloud environment. The primary goal is to equip you with the understanding and tools to confidently deploy and manage workloads across Azure and integrated hyperscalers, grasping the architectural implications and the evolving governance model. This document details the strategic imperative, architectural principles, operational evolution, and practical considerations for working within this expanded ecosystem.\n\n## 1. Executive Summary: The Strategic Imperative for Multi-Cloud\n\nThe \u0027Multi-Cloud Strategy \u0026 Execution Assessment\u0027 identifies a critical evolution in our cloud strategy. While our existing Azure foundation provides robust governance and platform engineering, it faces structural limitations in meeting the specialized compute, scalability, and service diversity ...",
+    "goalAchievementPct": 100,
+    "iterationsUsed": 2,
+    "wasRefined": true,
+    "createdAt": "2026-06-27T09:00:02.0410695\u002B00:00"
+  },
+  {
+    "title": "Multi-Cloud Reference Architecture",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s long-term objectives for AI/ML capabilities, scalability, and vendor risk reduction. This document aims to secure stakeholder consensus on the architectural principles and high-level design for integrating a secondary hyperscaler.",
+    "criteriaUsed": [
+      "The proposed architecture must demonstrate technical feasibility for integrating a secondary hyperscaler with existing Azure foundations.",
+      "Security controls and identity management solutions must be robust and consistently applied across both cloud environments.",
+      "The design must support high availability, disaster recovery, and scalability requirements for critical workloads.",
+      "Workload portability mechanisms must be clearly defined and technically viable for high-demand use cases.",
+      "Does it include epics with user stories in As-a / I-want / So-that format?",
+      "Does it list third-party dependencies with test-double substitution guidance?",
+      "Does it document design patterns applied and why each was chosen?"
+    ],
+    "excerpt": "# Multi-Cloud Reference Architecture\n\nThis developer handbook outlines the Multi-Cloud Reference Architecture, a strategic evolution designed to augment our existing Azure foundation with a secondary hyperscaler. It is intended for the engineering team and onboarding developers, providing a comprehensive understanding of the architectural foresight and strategic rationale behind this federated multi-cloud model. The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s long-term objectives for AI/ML capabilities, scalability, and vendor risk reduction. This document aims to secure stakeholder consensus on the architectural principles and high-level design for integrating a secondary hyperscaler.\n\n## 1. Executive Summary: Strategic Imperative for Federated Multi-Cloud\n\nThe \u0027Multi-Cloud Strategy \u0026 Execution Assessment\u0027 identifies a pressing need to augment our current single-hyperscaler Azure foundation. While Azure provides a matur...",
+    "goalAchievementPct": 100,
+    "iterationsUsed": 2,
+    "wasRefined": false,
+    "createdAt": "2026-06-27T09:14:48.9178456\u002B00:00"
+  },
+  {
+    "title": "Multi-Cloud Reference Architecture",
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "goalUsed": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring the Product Owner and Engineering team understand its strategic benefits, technical feasibility, and alignment with business objectives. Success means stakeholders are confident in the architectural direction and the plan for integrating a secondary hyperscaler.",
+    "criteriaUsed": [
+      "The document clearly defines the architectural patterns for multi-cloud integration (e.g., hub-and-spoke, federated identity).",
+      "It accurately details the technical considerations for workload portability and data synchronization between hyperscalers.",
+      "The proposed solutions demonstrate robust resilience and disaster recovery strategies across the multi-cloud environment.",
+      "It provides clear guidance on leveraging specialized AI/ML capabilities from the secondary hyperscaler.",
+      "Does it include epics with user stories in As-a / I-want / So-that format?",
+      "Does it list third-party dependencies with test-double substitution guidance?",
+      "Does it document design patterns applied and why each was chosen?"
+    ],
+    "excerpt": "# Multi-Cloud Reference Architecture\n\nThis handbook outlines the Multi-Cloud Reference Architecture, a strategic evolution building upon our robust Azure foundation. It is designed for the Product Owner and Engineering team to provide a comprehensive understanding of the strategic benefits, technical feasibility, and alignment with business objectives for adopting a federated multi-cloud model. The primary goal is to validate this proposed strategy, ensuring stakeholders are confident in the architectural direction and the plan for integrating a secondary hyperscaler.\n\n## 1. Executive Summary: Strategic Imperative for Multi-Cloud Adoption\n\nThe \u0027Multi-Cloud Strategy \u0026 Execution Assessment\u0027 identifies a critical need to augment our current single-hyperscaler Azure foundation. While Azure provides a mature and well-governed environment, it faces structural limitations in meeting the evolving demands for specialized compute, scalability, and service diversity, particularly for advanced AI/...",
+    "goalAchievementPct": 100,
+    "iterationsUsed": 2,
+    "wasRefined": false,
+    "createdAt": "2026-06-27T09:16:05.4095770\u002B00:00"
+  },
+  {
+    "title": "Intelligent Resource Provisioning \u0026 Scaling \u2014 Developer Handbook",
+    "domain": "Enterprise AI Platform",
+    "solutionType": "ML Inference",
+    "goalUsed": "The reader can understand the solution and make an informed decision.",
+    "criteriaUsed": [
+      "Does it clearly state the problem and solution?",
+      "Does it address likely objections?",
+      "Does it include a concrete next step?",
+      "Would the target reader find it credible?"
+    ],
+    "excerpt": "# Intelligent Resource Provisioning \u0026 Scaling \u2014 Developer Handbook\\n\\nThis handbook provides a comprehensive overview of the Intelligent Resource Provisioning \u0026 Scaling solution, designed for onboarding engineers and mid-level developers. It details the architecture, core functionalities, and operational considerations necessary to effectively contribute to and leverage this Enterprise AI Platform.\\n\\n## 1. Introduction to Intelligent Resource Provisioning \u0026 Scaling\\n\\nIntelligent Resource Provisioning \u0026 Scaling is a cloud-native, multi-tenant Enterprise AI Platform built on an event-driven microservices architecture. Its primary purpose is to expose a unified AI inference layer, combining LLM orchestration, vector search, agentic process automation, and real-time feature stores. The platform is engineered to deliver sub-200ms responses at p99 latency under sustained load, making it suitable for high-performance, real-time AI applications. A key differentiator is its configurable singl...",
+    "goalAchievementPct": 85,
+    "iterationsUsed": 1,
+    "wasRefined": false,
+    "createdAt": "2026-06-23T20:26:20.9603514\u002B00:00"
+  }
+]

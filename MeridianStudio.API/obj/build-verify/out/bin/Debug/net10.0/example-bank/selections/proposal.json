@@ -1,0 +1,156 @@
+[
+  {
+    "domain": "IT Operations and AIOps",
+    "solutionType": "Event-Driven",
+    "selectedTone": "Adopt a proactive, strategic, and forward-thinking tone, emphasizing foresight and business value.",
+    "selectedGoal": "Achieve a significant reduction in critical IT incidents and associated downtime. Ensure uninterrupted service delivery and maintain high availability for all business-critical applications and infrastructure. This directly supports revenue generation and customer satisfaction.",
+    "selectedCriteria": [
+      "Quantifiable reduction in incident-related revenue loss.",
+      "Demonstrable decrease in operational expenditure due to proactive measures.",
+      "Improved customer satisfaction scores linked to service uptime.",
+      "Clear ROI projection based on incident avoidance and resource optimization."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-23T02:45:35.8334386\u002B00:00"
+  },
+  {
+    "domain": "IT Operations and Service Management",
+    "solutionType": "ML Inference",
+    "selectedTone": "Adopt a proactive, authoritative, and technically informed tone, emphasizing AI-driven foresight and operational control.",
+    "selectedGoal": "To significantly reduce unplanned IT incidents and service disruptions. The primary goal is to achieve a measurable decrease in critical incident occurrences, thereby enhancing overall service availability and user satisfaction. This directly supports business continuity and operational efficiency.",
+    "selectedCriteria": [
+      "Demonstrates clear return on investment through reduced incident-related costs.",
+      "Quantifies reduction in operational expenditure and potential revenue loss.",
+      "Highlights competitive advantage gained through superior IT service reliability.",
+      "Aligns with overall business objectives and strategic growth initiatives."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-23T03:31:30.8544060\u002B00:00"
+  },
+  {
+    "domain": "Enterprise AI Platform",
+    "solutionType": "ML Inference",
+    "selectedTone": "Professional, clear, and authoritative",
+    "selectedGoal": "The reader can understand the solution and make an informed decision.",
+    "selectedCriteria": [
+      "Does it clearly state the problem and solution?",
+      "Does it address likely objections?",
+      "Does it include a concrete next step?",
+      "Would the target reader find it credible?"
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-23T20:23:32.2130859\u002B00:00"
+  },
+  {
+    "domain": "Enterprise AI Platform",
+    "solutionType": "ML Inference",
+    "selectedTone": "Professional, clear, and authoritative",
+    "selectedGoal": "The reader can understand the solution and make an informed decision.",
+    "selectedCriteria": [
+      "Does it clearly state the problem and solution?",
+      "Does it address likely objections?",
+      "Does it include a concrete next step?",
+      "Would the target reader find it credible?"
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-23T20:23:51.6056703\u002B00:00"
+  },
+  {
+    "domain": "Core Software \u0026 Tech",
+    "solutionType": "Event-Driven",
+    "selectedTone": "Professional, clear, and authoritative",
+    "selectedGoal": "The reader can understand the solution and make an informed decision.",
+    "selectedCriteria": [
+      "Does it clearly state the problem and solution?",
+      "Does it address likely objections?",
+      "Does it include a concrete next step?",
+      "Would the target reader find it credible?"
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-24T06:16:28.2213731\u002B00:00"
+  },
+  {
+    "domain": "Core Software \u0026 Tech",
+    "solutionType": "Event-Driven",
+    "selectedTone": "Maintain a professional, clear, and authoritative tone, suitable for technical leadership.",
+    "selectedGoal": "The reader can understand the AIOps platform\u0027s technical architecture, operational benefits, and strategic alignment. They should be able to validate its potential to significantly reduce MTTR and on-call burden.",
+    "selectedCriteria": [
+      "Clearly articulates the event-driven architecture and ML model effectiveness.",
+      "Demonstrates how the solution achieves 60% MTTR reduction and 35% on-call volume decrease.",
+      "Addresses non-functional targets: high availability, low latency, and accuracy.",
+      "Outlines the platform\u0027s scalability to handle increasing observability data volumes."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-24T19:48:54.7250578\u002B00:00"
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Maintain an authoritative and strategic tone, emphasizing architectural foresight and robust solutions.",
+    "selectedGoal": "For the Engineering team, the goal is to clearly articulate the technical rationale and architectural patterns for the federated multi-cloud model. Success means the team understands the proposed integration points, data flow, and security implications, enabling effective planning for implementation.",
+    "selectedCriteria": [
+      "The proposed architecture clearly defines integration patterns between Azure and the alternate hyperscaler.",
+      "The document specifies key services and technologies to be leveraged on both cloud platforms.",
+      "Potential technical challenges and their mitigation strategies for cross-cloud communication are addressed.",
+      "The solution ensures seamless data flow and governance across the multi-cloud environment."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-26T05:23:31.2101307\u002B00:00"
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Adopt a strategic and visionary tone, emphasizing future growth and innovation.",
+    "selectedGoal": "Obtain executive and board approval to initiate the strategic expansion to a multi-cloud model. This includes securing the necessary budget and resources to onboard an alternate hyperscaler for specialized AI/ML and data workloads, while ensuring seamless integration with existing Azure governance and platform engineering practices.",
+    "selectedCriteria": [
+      "Board approval for multi-cloud initiative and initial budget allocation.",
+      "Clear articulation of ROI for specialized AI/ML capabilities and risk mitigation.",
+      "Demonstrated alignment with long-term business growth and innovation objectives.",
+      "Identification of key business units benefiting from enhanced cloud capabilities."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-26T16:38:39.2495912\u002B00:00"
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Maintain an authoritative and strategic tone, emphasizing architectural foresight and robust solutions.",
+    "selectedGoal": "For the Client Sponsor, the goal is to secure executive buy-in for the proposed multi-cloud strategy, demonstrating its alignment with long-term business objectives and competitive advantage. Success means obtaining a clear mandate to proceed with the strategic integration of alternate hyperscalers.",
+    "selectedCriteria": [
+      "Demonstrates clear ROI and TCO benefits over a 3-5 year horizon.",
+      "Aligns with the client\u0027s long-term digital transformation roadmap and growth objectives.",
+      "Provides a compelling case for reducing vendor concentration risk and enhancing market agility.",
+      "Secures executive approval for the proposed multi-cloud investment and strategic direction."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-26T17:56:01.0494605\u002B00:00"
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Maintain an authoritative and strategic tone, emphasizing architectural foresight and robust solutions.",
+    "selectedGoal": "For the Client Sponsor, the goal is to secure executive buy-in for the proposed multi-cloud strategy, demonstrating its alignment with long-term business objectives and competitive advantage. Success means obtaining a clear mandate to proceed with the strategic integration of alternate hyperscalers.",
+    "selectedCriteria": [
+      "Demonstrates clear ROI and TCO benefits over a 3-5 year horizon.",
+      "Aligns with the client\u0027s long-term digital transformation roadmap and growth objectives.",
+      "Provides a compelling case for reducing vendor concentration risk and enhancing market agility.",
+      "Secures executive approval for the proposed multi-cloud investment and strategic direction."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-26T17:56:44.4943504\u002B00:00"
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Adopt a strategic and visionary tone, emphasizing future growth and innovation in cloud architecture.",
+    "selectedGoal": "For the Client Sponsor, the goal is to secure executive buy-in for the proposed federated multi-cloud strategy. This involves demonstrating how the strategy addresses current limitations, mitigates risk, and aligns with long-term business objectives, ensuring a clear path for implementation.",
+    "selectedCriteria": [
+      "The proposed multi-cloud architecture must seamlessly integrate with the existing Azure Landing Zone and platform engineering model.",
+      "The solution must demonstrate clear pathways for optimizing specialized AI/ML and data-intensive workloads across hyperscalers.",
+      "The strategy must include robust governance and security frameworks applicable across the federated multi-cloud environment.",
+      "The assessment must provide a clear roadmap for phased implementation and operational handover."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-27T08:01:00.9340865\u002B00:00"
+  }
+]

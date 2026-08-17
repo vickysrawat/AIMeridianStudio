@@ -1,0 +1,302 @@
+[
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Maintain an authoritative and strategic tone, emphasizing architectural foresight and robust solutions.",
+    "selectedGoal": "The primary goal is to validate the proposed federated multi-cloud model, ensuring it effectively extends existing Azure governance to new hyperscalers. Success means stakeholders understand and endorse the architectural approach for specialized AI/ML and data workloads, confirming its alignment with strategic objectives.",
+    "selectedCriteria": [
+      "The proposed architecture clearly defines integration points and responsibilities across hyperscalers.",
+      "Security and compliance controls are consistently applied and extend effectively to new cloud providers.",
+      "The solution demonstrates a clear path for achieving workload portability and data sovereignty.",
+      "Performance and scalability requirements for AI/ML and data workloads are adequately addressed."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-27T08:55:26.6922359\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Maintain an authoritative and strategic tone, emphasizing architectural foresight and robust solutions.",
+    "selectedGoal": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s long-term objectives for AI/ML capabilities, scalability, and vendor risk reduction. This document aims to secure stakeholder consensus on the architectural principles and high-level design for integrating a secondary hyperscaler.",
+    "selectedCriteria": [
+      "The proposed architecture must demonstrate technical feasibility for integrating a secondary hyperscaler with existing Azure foundations.",
+      "Security controls and identity management solutions must be robust and consistently applied across both cloud environments.",
+      "The design must support high availability, disaster recovery, and scalability requirements for critical workloads.",
+      "Workload portability mechanisms must be clearly defined and technically viable for high-demand use cases."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-27T09:11:00.1145640\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Maintain an authoritative and strategic tone, emphasizing architectural foresight and robust solutions.",
+    "selectedGoal": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s long-term objectives for AI/ML capabilities, scalability, and vendor risk reduction. This document aims to secure stakeholder consensus on the architectural principles and high-level design for integrating a secondary hyperscaler.",
+    "selectedCriteria": [
+      "The proposed architecture must demonstrate technical feasibility for integrating a secondary hyperscaler with existing Azure foundations.",
+      "Security controls and identity management solutions must be robust and consistently applied across both cloud environments.",
+      "The design must support high availability, disaster recovery, and scalability requirements for critical workloads.",
+      "Workload portability mechanisms must be clearly defined and technically viable for high-demand use cases."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-27T09:13:10.1069713\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Maintain an authoritative and strategic tone, emphasizing architectural foresight and robust solutions.",
+    "selectedGoal": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s long-term objectives for AI/ML capabilities, scalability, and vendor risk reduction. This document aims to secure stakeholder consensus on the architectural principles and high-level design for integrating a secondary hyperscaler.",
+    "selectedCriteria": [
+      "The proposed architecture must demonstrate technical feasibility for integrating a secondary hyperscaler with existing Azure foundations.",
+      "Security controls and identity management solutions must be robust and consistently applied across both cloud environments.",
+      "The design must support high availability, disaster recovery, and scalability requirements for critical workloads.",
+      "Workload portability mechanisms must be clearly defined and technically viable for high-demand use cases."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-27T09:18:39.8602303\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Computing",
+    "solutionType": "",
+    "selectedTone": "Maintain a strategic and authoritative tone, guiding multi-cloud architectural decisions with confidence.",
+    "selectedGoal": "For the Enterprise Architect, this document aims to validate the proposed multi-cloud architecture\u0027s alignment with long-term enterprise strategy and existing Azure governance. Success means confirming the architectural principles support scalable AI/ML workloads and mitigate vendor lock-in, ensuring a cohesive cloud ecosystem.",
+    "selectedCriteria": [
+      "The proposed multi-cloud architecture must integrate seamlessly with existing Azure Landing Zone governance and platform engineering.",
+      "The selected secondary hyperscaler must demonstrate native support for specialized AI/ML services critical to future workload demands.",
+      "The phased execution roadmap must clearly define technical dependencies and operational handoffs between cloud environments.",
+      "The solution must ensure consistent identity and access management (IAM) across Azure and the secondary hyperscaler."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-27T16:11:42.5089699\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Maintain an authoritative and strategic tone, emphasizing architectural foresight and robust solutions.",
+    "selectedGoal": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s objectives for specialized AI/ML capabilities, scalability, and reduced vendor risk. This document aims to secure stakeholder consensus on the architectural approach for extending existing Azure governance to a secondary hyperscaler.",
+    "selectedCriteria": [
+      "The proposed architecture clearly defines how Azure governance and platform engineering models will extend to the secondary hyperscaler.",
+      "The document provides a detailed plan for seamless integration of identity, networking, and security across both cloud environments.",
+      "Technical specifications for specialized AI/ML capabilities and data-intensive workload scalability are adequately addressed.",
+      "The design demonstrates a clear path for the development team to implement and operate solutions within the multi-cloud framework."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-27T20:58:34.2671315\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Maintain an authoritative and strategic tone, emphasizing architectural foresight and robust solutions.",
+    "selectedGoal": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s objectives for specialized AI/ML capabilities, scalability, and reduced vendor risk. This document aims to secure stakeholder consensus on the architectural approach for extending existing Azure governance to a secondary hyperscaler.",
+    "selectedCriteria": [
+      "The proposed architecture clearly defines how Azure governance and platform engineering models will extend to the secondary hyperscaler.",
+      "The document provides a detailed plan for seamless integration of identity, networking, and security across both cloud environments.",
+      "Technical specifications for specialized AI/ML capabilities and data-intensive workload scalability are adequately addressed.",
+      "The design demonstrates a clear path for the development team to implement and operate solutions within the multi-cloud framework."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-27T20:59:03.0839414\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Strategy \u0026 Architecture",
+    "solutionType": "",
+    "selectedTone": "Maintain an authoritative and strategic tone, emphasizing architectural foresight and robust solutions.",
+    "selectedGoal": "The primary goal is to validate the proposed federated multi-cloud strategy, ensuring it aligns with the client\u0027s objectives for specialized AI/ML capabilities, scalability, and reduced vendor risk. This document aims to secure stakeholder consensus on the architectural approach for extending existing Azure governance to a secondary hyperscaler.",
+    "selectedCriteria": [
+      "The proposed architecture clearly defines how Azure governance and platform engineering models will extend to the secondary hyperscaler.",
+      "The document provides a detailed plan for seamless integration of identity, networking, and security across both cloud environments.",
+      "Technical specifications for specialized AI/ML capabilities and data-intensive workload scalability are adequately addressed.",
+      "The design demonstrates a clear path for the development team to implement and operate solutions within the multi-cloud framework."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-27T21:02:22.5664087\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Computing",
+    "solutionType": "",
+    "selectedTone": "Maintain a strategic and authoritative tone, guiding multi-cloud architectural decisions with confidence.",
+    "selectedGoal": "For the Enterprise Architect, this document aims to validate the strategic imperative for a multi-cloud approach, demonstrating how integrating a secondary hyperscaler addresses current limitations in AI/ML and data-intensive workloads. It should provide a robust architectural blueprint that aligns with enterprise objectives and future growth.",
+    "selectedCriteria": [
+      "The proposed multi-cloud architecture demonstrably supports specialized AI/ML and data-intensive workloads.",
+      "The integration strategy ensures seamless data flow and application interoperability between hyperscalers.",
+      "The solution design provides enhanced scalability and resilience beyond a single-cloud model.",
+      "The technical roadmap includes clear phases and dependencies for successful implementation."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-28T02:34:46.1433313\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Computing \u0026 AI/ML",
+    "solutionType": "",
+    "selectedTone": "Maintain a strategic and authoritative tone, guiding multi-cloud architectural decisions with confidence.",
+    "selectedGoal": "For the Enterprise Architect, this document aims to validate the proposed multi-cloud strategy, ensuring it aligns with enterprise architectural principles and future-proofs the client\u0027s AI/ML capabilities. It should clearly articulate how the integration of a secondary hyperscaler addresses current limitations and enhances overall cloud resilience and innovation.",
+    "selectedCriteria": [
+      "The proposed multi-cloud architecture demonstrably addresses current AI/ML workload limitations.",
+      "The integration strategy for GCP with existing Azure estate is clearly defined and technically feasible.",
+      "Workload portability and data governance mechanisms across hyperscalers are adequately detailed.",
+      "The document provides clear architectural patterns for deploying AI/ML solutions in the multi-cloud environment."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-28T03:01:50.1601681\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Computing",
+    "solutionType": "",
+    "selectedTone": "Adopt a strategic and authoritative tone, emphasizing architectural foresight and robust decision-making.",
+    "selectedGoal": "For the Enterprise Architect, the goal is to validate the proposed multi-cloud strategy as technically sound, strategically aligned with business objectives, and capable of extending existing governance models. Success means securing architectural approval for the phased evaluation and integration of a secondary hyperscaler.",
+    "selectedCriteria": [
+      "The proposed multi-cloud architecture seamlessly extends existing Azure governance and platform engineering models.",
+      "The strategy clearly identifies and leverages differentiated AI/ML and data capabilities from the secondary hyperscaler.",
+      "The document provides a clear, phased roadmap for evaluation and integration, minimizing disruption to current operations.",
+      "The technical recommendations are feasible, scalable, and align with industry best practices for cloud architecture."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-07-01T22:04:29.6054322\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Computing \u0026 AI/ML",
+    "solutionType": "",
+    "selectedTone": "Maintain a strategic and authoritative tone, guiding multi-cloud architectural decisions with confidence.",
+    "selectedGoal": "For the Enterprise Architect, this document aims to validate the proposed multi-cloud strategy, specifically the phased adoption of GCP for AI/ML, ensuring it aligns with enterprise architecture principles and future scalability needs. It should confirm the strategic rationale for extending, rather than replacing, existing Azure capabilities.",
+    "selectedCriteria": [
+      "The proposed architecture seamlessly integrates GCP AI/ML services with existing Azure governance and security frameworks.",
+      "The design ensures workload portability and scalability across both hyperscalers for high-demand use cases.",
+      "The document clearly defines architectural patterns for data ingestion, processing, and model deployment leveraging GCP\u0027s differentiated capabilities.",
+      "The solution mitigates vendor concentration risk while extending current capabilities without disruption."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-07-01T22:27:19.3446529\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Computing \u0026 AI/ML",
+    "solutionType": "",
+    "selectedTone": "Maintain a strategic and authoritative tone, guiding multi-cloud architectural decisions with confidence.",
+    "selectedGoal": "For the Enterprise Architect, this document aims to validate the proposed multi-cloud strategy, specifically the phased adoption of GCP for AI/ML, ensuring it aligns with enterprise architecture principles and future scalability needs. It should confirm the strategic rationale for extending, rather than replacing, existing Azure capabilities.",
+    "selectedCriteria": [
+      "The proposed architecture seamlessly integrates GCP AI/ML services with existing Azure governance and security frameworks.",
+      "The design ensures workload portability and scalability across both hyperscalers for high-demand use cases.",
+      "The document clearly defines architectural patterns for data ingestion, processing, and model deployment leveraging GCP\u0027s differentiated capabilities.",
+      "The solution mitigates vendor concentration risk while extending current capabilities without disruption."
+    ],
+    "wasRefined": true,
+    "timestamp": "2026-07-01T22:31:16.8521250\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Computing",
+    "solutionType": "",
+    "selectedTone": "Maintain a strategic and authoritative tone, guiding multi-cloud architectural decisions with confidence.",
+    "selectedGoal": "For the Enterprise Architect, this document aims to validate the proposed multi-cloud strategy, ensuring it aligns with enterprise architectural principles and future growth objectives. It should provide a robust framework for selecting a secondary hyperscaler and integrating specialized AI/ML capabilities, while maintaining governance and operational consistency across the hybrid estate.",
+    "selectedCriteria": [
+      "The proposed multi-cloud architecture effectively addresses limitations in specialized AI/ML compute and service diversity.",
+      "The strategy ensures workload portability and scalability for high-demand AI/ML use cases across hyperscalers.",
+      "Existing governance and platform engineering models are demonstrably extended and maintained within the multi-cloud framework.",
+      "The recommended secondary hyperscaler (AWS or GCP) is justified by a structured evaluation framework, detailing technical fit and integration feasibility."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-07-02T13:08:13.9161543\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Strategy \u0026 AI/ML",
+    "solutionType": "",
+    "selectedTone": "Maintain a strategic and authoritative tone, guiding stakeholders through complex multi-cloud decisions.",
+    "selectedGoal": "The primary goal is to secure stakeholder alignment and validation for the proposed multi-cloud strategy, specifically the integration of a secondary hyperscaler for AI/ML workloads. Success means clear endorsement to proceed with the detailed design and implementation planning, ensuring all key decision-makers understand the strategic imperative and benefits.",
+    "selectedCriteria": [
+      "The proposed architecture for AI/ML workloads demonstrates technical feasibility across selected hyperscalers.",
+      "Solution components are designed for optimal performance, scalability, and resilience for data-intensive tasks.",
+      "Integration patterns between Azure and the secondary hyperscaler are clearly defined and technically sound.",
+      "The design incorporates best practices for MLOps and data governance in a multi-cloud context."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-07-02T18:51:39.3720207\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Strategy \u0026 AI/ML",
+    "solutionType": "",
+    "selectedTone": "Maintain a strategic and authoritative tone, guiding stakeholders through complex multi-cloud decisions.",
+    "selectedGoal": "The primary goal is to secure stakeholder alignment and validation for the proposed multi-cloud strategy, specifically the integration of a secondary hyperscaler for AI/ML workloads. Success means clear endorsement to proceed with the detailed design and implementation planning, ensuring all key decision-makers understand the strategic imperative and benefits.",
+    "selectedCriteria": [
+      "The proposed architecture for AI/ML workloads demonstrates technical feasibility across selected hyperscalers.",
+      "Solution components are designed for optimal performance, scalability, and resilience for data-intensive tasks.",
+      "Integration patterns between Azure and the secondary hyperscaler are clearly defined and technically sound.",
+      "The design incorporates best practices for MLOps and data governance in a multi-cloud context."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-07-02T19:23:07.0744818\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Strategy \u0026 AI/ML",
+    "solutionType": "",
+    "selectedTone": "Maintain a strategic and authoritative tone, guiding stakeholders through complex multi-cloud decisions.",
+    "selectedGoal": "The primary goal is to secure stakeholder alignment and validation for the proposed multi-cloud strategy, specifically the integration of a secondary hyperscaler for AI/ML workloads. Success means clear endorsement to proceed with the detailed design and implementation planning, ensuring all key decision-makers understand the strategic imperative and benefits.",
+    "selectedCriteria": [
+      "The proposed architecture for AI/ML workloads demonstrates technical feasibility across selected hyperscalers.",
+      "Solution components are designed for optimal performance, scalability, and resilience for data-intensive tasks.",
+      "Integration patterns between Azure and the secondary hyperscaler are clearly defined and technically sound.",
+      "The design incorporates best practices for MLOps and data governance in a multi-cloud context."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-07-02T19:59:40.1746904\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Computing \u0026 AI/ML",
+    "solutionType": "",
+    "selectedTone": "Maintain a strategic and authoritative tone, guiding multi-cloud architectural decisions with confidence.",
+    "selectedGoal": "For the Enterprise Architect, this document aims to validate the proposed multi-cloud strategy, ensuring alignment with enterprise objectives and architectural principles. It should confirm the technical feasibility and strategic benefits of integrating a secondary hyperscaler for AI/ML workloads.",
+    "selectedCriteria": [
+      "Solution aligns with existing Azure Landing Zone and governance model.",
+      "Secondary hyperscaler selection criteria are clearly defined and justified for AI/ML.",
+      "Proposed integration patterns support seamless data flow and workload portability.",
+      "Scalability and resilience requirements for AI/ML workloads are adequately addressed."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-07-02T21:57:34.6536166\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Core Software \u0026 Tech",
+    "solutionType": "Event-Driven",
+    "selectedTone": "Maintain a professional, clear, and authoritative tone, suitable for technical leadership.",
+    "selectedGoal": "The reader can understand the AI-Assisted Code Review \u0026 Security Gate\u0027s technical architecture, its integration into CI/CD, and its value proposition for enhancing code quality and security. They should be able to validate its alignment with strategic technology goals.",
+    "selectedCriteria": [
+      "Clearly articulates how the LLM-powered static analysis tool integrates into existing CI/CD pipelines.",
+      "Demonstrates the solution\u0027s accuracy in detecting OWASP Top 10 vulnerabilities and architectural anti-patterns.",
+      "Explains the mechanism for providing low-latency PR feedback and fix suggestions.",
+      "Addresses scalability and robustness for enterprise-level codebases and development teams."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-07-03T23:03:09.6128521\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "IT Services Automation",
+    "solutionType": "Event-Driven",
+    "selectedTone": "Employ a pragmatic, actionable, and solution-oriented tone for implementation guidance.",
+    "selectedGoal": "To ensure the operational readiness of the AI Agent platform by detailing its deployment model, monitoring strategies, incident management procedures, and disaster recovery plans. This goal focuses on equipping DevOps and operations teams with the necessary information to maintain system uptime, performance, and resilience in a production environment, supporting thousands of concurrent incident resolutions.",
+    "selectedCriteria": [
+      "The proposed architecture clearly supports a 30-50% reduction in MTTR for L1/L2 incidents.",
+      "The design demonstrates robust scalability to handle thousands of concurrent incident resolutions without performance degradation.",
+      "All event-driven components and their interactions are precisely defined, enabling unambiguous implementation.",
+      "Security mechanisms for integrated enterprise systems are explicitly detailed and meet established enterprise standards."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-07-04T00:26:25.7962974\u002B00:00",
+    "subDomain": null
+  }
+]

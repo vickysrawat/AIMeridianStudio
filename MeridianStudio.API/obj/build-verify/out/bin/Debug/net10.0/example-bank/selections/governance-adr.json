@@ -1,0 +1,62 @@
+[
+  {
+    "domain": "Intelligent Process Automation",
+    "solutionType": "ML Inference",
+    "selectedTone": "Professional, clear, and authoritative",
+    "selectedGoal": "The reader can understand the solution and make an informed decision.",
+    "selectedCriteria": [
+      "Does it clearly state the problem and solution?",
+      "Does it address likely objections?",
+      "Does it include a concrete next step?",
+      "Would the target reader find it credible?"
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-23T17:07:15.0859089\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Intelligent Process Automation",
+    "solutionType": "ML Inference",
+    "selectedTone": "Professional, clear, and authoritative",
+    "selectedGoal": "The reader can understand the solution and make an informed decision.",
+    "selectedCriteria": [
+      "Does it clearly state the problem and solution?",
+      "Does it address likely objections?",
+      "Does it include a concrete next step?",
+      "Would the target reader find it credible?"
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-23T17:08:02.1886658\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Legal Technology",
+    "solutionType": "ML Inference",
+    "selectedTone": "Maintain an authoritative, precise, and technically rigorous tone suitable for architects and engineers.",
+    "selectedGoal": "Empower the engineering team to accurately implement the AI inference layer, ensuring all microservices and RAG components align with architectural specifications. Success means engineers can develop and integrate features with minimal ambiguity, meeting performance and security requirements.",
+    "selectedCriteria": [
+      "All microservice interfaces (APIs, event contracts) are fully defined and unambiguous.",
+      "Data models for feature store enrichment and AI inference input/output are explicitly detailed.",
+      "Performance targets (e.g., sub-200ms p99 latency) are clearly linked to specific architectural components.",
+      "Security considerations (e.g., OAuth 2.0/OIDC integration, data isolation) are addressed for each component."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-23T21:28:46.4546810\u002B00:00",
+    "subDomain": null
+  },
+  {
+    "domain": "Cloud Computing \u0026 AI/ML",
+    "solutionType": "",
+    "selectedTone": "Adopt a strategic and authoritative tone, emphasizing foresight and robust architectural principles.",
+    "selectedGoal": "The primary goal is to enable the client to leverage differentiated AI/ML capabilities across multiple hyperscalers, fostering innovation and accelerating data-intensive workload development. Success means a clear pathway for integrating specialized AI/ML services from a secondary provider like GCP, complementing existing Azure strengths.",
+    "selectedCriteria": [
+      "The proposed multi-cloud architecture clearly defines integration points and data flow for AI/ML workloads.",
+      "The strategy ensures seamless extension of existing Azure platform engineering practices to the secondary hyperscaler.",
+      "Workload portability mechanisms between cloud environments are well-articulated and technically feasible.",
+      "The document addresses potential technical debt or complexity introduced by multi-cloud adoption."
+    ],
+    "wasRefined": false,
+    "timestamp": "2026-06-28T03:04:58.6209115\u002B00:00",
+    "subDomain": null
+  }
+]

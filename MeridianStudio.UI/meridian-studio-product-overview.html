@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeridianStudio — Product Overview</title>
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --primary-light: #e0e7ff;
+      --secondary: #0ea5e9;
+      --accent: #8b5cf6;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface2: #273549;
+      --border: #334155;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 50%, #0c1a2e 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 2rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(99,102,241,.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 30%, rgba(139,92,246,.10) 0%, transparent 50%);
+    }
+    header .inner {
+      max-width: 1100px; margin: 0 auto; position: relative;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(99,102,241,.2);
+      color: #a5b4fc;
+      border: 1px solid rgba(99,102,241,.4);
+      border-radius: 99px;
+      padding: .25rem .75rem;
+      font-size: .75rem;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #a5b4fc, #e0f2fe, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: .5rem;
+    }
+    header .tagline {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+    }
+    header .meta-row {
+      display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;
+    }
+    header .meta-item {
+      display: flex; flex-direction: column; gap: .15rem;
+    }
+    header .meta-item span:first-child {
+      font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-subtle);
+    }
+    header .meta-item span:last-child {
+      font-size: .9rem; color: var(--text-muted);
+    }
+    /* ── LAYOUT ── */
+    .page { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem; }
+    /* ── NAV ── */
+    nav.toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    nav.toc h2 {
+      font-size: .8rem; text-transform: uppercase; letter-spacing: .1em;
+      color: var(--text-subtle); margin-bottom: 1rem;
+    }
+    nav.toc ol {
+      list-style: decimal; padding-left: 1.25rem;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .4rem;
+    }
+    nav.toc a {
+      color: var(--text-muted); text-decoration: none; font-size: .9rem;
+      transition: color .2s;
+    }
+    nav.toc a:hover { color: #a5b4fc; }
+    /* ── SECTIONS ── */
+    section { margin-bottom: 3rem; scroll-margin-top: 2rem; }
+    section h2 {
+      display: flex; align-items: center; gap: .6rem;
+      font-size: 1.4rem; font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 1.5rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    section h2 .icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    section h3 {
+      font-size: 1.1rem; font-weight: 600; color: #cbd5e1;
+      margin: 1.5rem 0 .75rem;
+    }
+    p { color: var(--text-muted); margin-bottom: 1rem; }
+    ul, ol { color: var(--text-muted); padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: .4rem; }
+    strong { color: var(--text); }
+    /* ── CARDS ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .feature-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(99,102,241,.3);
+    }
+    .feature-card .fc-icon {
+      font-size: 1.5rem; margin-bottom: .75rem;
+    }
+    .feature-card h4 {
+      font-size: 1rem; font-weight: 600; color: #e2e8f0; margin-bottom: .4rem;
+    }
+    .feature-card p {
+      font-size: .875rem; color: var(--text-muted); margin: 0;
+    }
+    /* ── MODEL CASCADE ── */
+    .cascade {
+      display: flex; align-items: center; gap: 0; flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+    .cascade-step {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .6rem 1rem;
+      font-size: .85rem;
+      display: flex; flex-direction: column; gap: .15rem;
+    }
+    .cascade-step .provider { font-weight: 600; color: var(--text); }
+    .cascade-step .model { font-size: .75rem; color: var(--text-subtle); }
+    .cascade-arrow {
+      color: var(--text-subtle); font-size: 1.2rem;
+      padding: 0 .5rem;
+    }
+    .cascade-step.fallback { border-color: var(--warning); }
+    .cascade-step.fallback .provider { color: var(--warning); }
+    /* ── API TABLE ── */
+    .api-table {
+      width: 100%; border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+    .api-table th {
+      background: var(--surface2);
+      text-align: left;
+      padding: .6rem 1rem;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--text-subtle);
+      border: 1px solid var(--border);
+    }
+    .api-table td {
+      padding: .7rem 1rem;
+      border: 1px solid var(--border);
+      font-size: .875rem;
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+    .api-table tr:hover td { background: rgba(255,255,255,.02); }
+    .method {
+      display: inline-block;
+      font-size: .7rem; font-weight: 700; letter-spacing: .05em;
+      border-radius: 4px; padding: .15rem .45rem;
+    }
+    .method.post { background: rgba(16,185,129,.15); color: #34d399; border: 1px solid rgba(16,185,129,.3); }
+    .method.get { background: rgba(14,165,233,.15); color: #38bdf8; border: 1px solid rgba(14,165,233,.3); }
+    code {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: .1rem .4rem;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: .8em;
+      color: #a5b4fc;
+    }
+    pre {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: .82rem;
+      color: #a5b4fc;
+      margin-bottom: 1rem;
+    }
+    /* ── VERTICALS ── */
+    .vertical-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: .75rem; margin-bottom: 1rem;
+    }
+    .vertical-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .75rem 1rem;
+      display: flex; gap: .6rem; align-items: flex-start;
+    }
+    .vertical-item .vi-num {
+      font-size: .7rem; font-weight: 700;
+      color: var(--text-subtle);
+      padding-top: .1rem; flex-shrink: 0;
+    }
+    .vertical-item .vi-body { flex: 1; }
+    .vertical-item .vi-name { font-size: .9rem; font-weight: 600; color: var(--text); }
+    .vertical-item .vi-kw { font-size: .75rem; color: var(--text-subtle); margin-top: .15rem; }
+    /* ── ENV TABLE ── */
+    .env-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: .75rem;
+    }
+    .env-label {
+      background: var(--surface2);
+      padding: .75rem 1rem;
+      font-size: .85rem; font-weight: 600; color: var(--text-muted);
+      border-right: 1px solid var(--border);
+    }
+    .env-value {
+      background: var(--surface);
+      padding: .75rem 1rem;
+      font-size: .85rem; color: var(--text-muted);
+    }
+    /* ── METRICS ── */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem; margin-bottom: 1rem;
+    }
+    .metric-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .metric-card .mval {
+      font-size: 2rem; font-weight: 800;
+      background: linear-gradient(135deg, #a5b4fc, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .metric-card .mlabel {
+      font-size: .8rem; color: var(--text-subtle); margin-top: .25rem;
+    }
+    /* ── STACK ── */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 640px) { .stack-grid { grid-template-columns: 1fr; } }
+    .stack-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .stack-box h4 {
+      font-size: .9rem; font-weight: 700;
+      color: #a5b4fc; margin-bottom: .75rem;
+      display: flex; align-items: center; gap: .4rem;
+    }
+    .stack-box ul { list-style: none; padding: 0; }
+    .stack-box li {
+      font-size: .875rem; color: var(--text-muted);
+      padding: .35rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.04);
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .stack-box li:last-child { border-bottom: none; }
+    .stack-box li::before { content: '›'; color: var(--primary); font-weight: 700; }
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-subtle);
+      font-size: .8rem;
+    }
+    /* ── CALLOUT ── */
+    .callout {
+      border-left: 3px solid var(--primary);
+      background: rgba(99,102,241,.08);
+      border-radius: 0 8px 8px 0;
+      padding: .75rem 1rem;
+      margin-bottom: 1rem;
+      font-size: .9rem;
+      color: var(--text-muted);
+    }
+    .callout.warning { border-color: var(--warning); background: rgba(245,158,11,.08); }
+    .callout.success { border-color: var(--success); background: rgba(16,185,129,.08); }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="inner">
+    <div class="badge">Product Overview — v0.0.1</div>
+    <h1>MeridianStudio</h1>
+    <p class="tagline">AI Solution Agent &amp; System Architect Hub — multi-model orchestration for strategic technology intelligence</p>
+    <div class="meta-row">
+      <div class="meta-item">
+        <span>Version</span>
+        <span>0.0.1</span>
+      </div>
+      <div class="meta-item">
+        <span>Frontend</span>
+        <span>Angular 19 · TypeScript 5.6</span>
+      </div>
+      <div class="meta-item">
+        <span>Backend</span>
+        <span>.NET 10 · C# 13 · Minimal API</span>
+      </div>
+      <div class="meta-item">
+        <span>Prepared</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- TOC -->
+  <nav class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#problem">Problem Statement</a></li>
+      <li><a href="#features">Core Features</a></li>
+      <li><a href="#llm-cascade">Multi-Model LLM Cascade</a></li>
+      <li><a href="#api">API Reference</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#verticals">Industry Verticals</a></li>
+      <li><a href="#stack">Technology Stack</a></li>
+      <li><a href="#environments">Environments</a></li>
+      <li><a href="#business-rules">Business Rules</a></li>
+      <li><a href="#success-metrics">Success Metrics</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. PROBLEM STATEMENT -->
+  <section id="problem">
+    <h2><span class="icon">🎯</span> Problem Statement</h2>
+    <p>
+      Technology leaders and architects spend significant time manually synthesising market intelligence,
+      designing system blueprints, generating implementation artefacts, and producing stakeholder documents.
+      Each of these activities requires context-switching across multiple tools, and the quality of outputs
+      is highly dependent on individual expertise and prompt engineering skills.
+    </p>
+    <p>
+      <strong>MeridianStudio</strong> solves this by providing a single, AI-orchestrated workspace that
+      chains market research → architectural blueprinting → task execution → document generation into a
+      cohesive workflow — backed by a multi-model LLM cascade that ensures availability even when
+      commercial API quotas are exhausted.
+    </p>
+    <div class="callout success">
+      The platform operates fully offline via a built-in Heuristic Engine — no API keys are required to
+      explore the full feature set across all 9 supported industry verticals.
+    </div>
+  </section>
+
+  <!-- 2. CORE FEATURES -->
+  <section id="features">
+    <h2><span class="icon">✨</span> Core Features</h2>
+    <div class="card-grid">
+      <div class="feature-card">
+        <div class="fc-icon">🔍</div>
+        <h4>Trends Discovery</h4>
+        <p>AI-powered market research that returns prioritised solution opportunities, competitor insights,
+           and domain intelligence for any industry keyword.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🏗️</div>
+        <h4>Architectural Blueprinter</h4>
+        <p>Generates complete system blueprints including scenario narrative, topology diagrams,
+           database schemas, REST endpoint manifests, and resilience strategies.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">⚙️</div>
+        <h4>Execution Pipeline</h4>
+        <p>Simulates task execution with real-time progress logs, generated C# 13 code templates,
+           and a 0–100 progress score for any engineering task.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📄</div>
+        <h4>Document Studio</h4>
+        <p>Produces four document types from a blueprint: Executive Summary, Market Analysis,
+           Technical Specification, and full Proposal — all as structured Markdown.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">💬</div>
+        <h4>Prompt Studio</h4>
+        <p>Generates developer-ready handoff prompts for any component, targeting Claude, Gemini,
+           or Groq — complete with structured directives and quality gates.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📊</div>
+        <h4>Executive Slides</h4>
+        <p>Exports workspace findings as a professional PowerPoint presentation via pptxgenjs
+           for stakeholder delivery.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📡</div>
+        <h4>Real-Time Model Status</h4>
+        <p>Live SSE stream shows which LLM provider is active per operation — with attempting,
+           succeeded, failed, and fallback events as they happen.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">⚡</div>
+        <h4>Offline Heuristic Engine</h4>
+        <p>Built-in deterministic engine covers all 9 industry verticals — the app runs without
+           any external API keys configured.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. LLM CASCADE -->
+  <section id="llm-cascade">
+    <h2><span class="icon">🤖</span> Multi-Model LLM Cascade</h2>
+    <p>
+      Every API operation routes through a prioritised cascade. If a provider returns a 429/503 or
+      is unconfigured, the orchestrator automatically promotes to the next tier — with zero user
+      intervention required.
+    </p>
+    <div class="cascade">
+      <div class="cascade-step">
+        <span class="provider">Gemini</span>
+        <span class="model">gemini-2.5-flash</span>
+      </div>
+      <div class="cascade-arrow">→</div>
+      <div class="cascade-step">
+        <span class="provider">Groq</span>
+        <span class="model">llama-3.3-70b-versatile</span>
+      </div>
+      <div class="cascade-arrow">→</div>
+      <div class="cascade-step">
+        <span class="provider">Claude</span>
+        <span class="model">claude-sonnet-4-6</span>
+      </div>
+      <div class="cascade-arrow">→</div>
+      <div class="cascade-step fallback">
+        <span class="provider">Heuristic Engine</span>
+        <span class="model">Offline · Always available</span>
+      </div>
+    </div>
+    <p>
+      All API responses include a <code>modelUsed</code> field identifying which tier produced the result.
+      Cached responses preserve the original <code>modelUsed</code> value.
+    </p>
+    <h3>Model-to-Operation Mapping</h3>
+    <table class="api-table">
+      <thead><tr><th>Operation</th><th>Primary Model</th><th>Fallback Chain</th></tr></thead>
+      <tbody>
+        <tr><td><code>/api/research</code></td><td>Gemini 2.5 Flash</td><td>Groq → Claude → Heuristic</td></tr>
+        <tr><td><code>/api/generate-blueprint</code></td><td>Groq llama-3.3-70b</td><td>Gemini → Claude → Heuristic</td></tr>
+        <tr><td><code>/api/execute-task</code></td><td>Heuristic Engine</td><td>N/A</td></tr>
+        <tr><td><code>/api/generate-document</code></td><td>Claude Sonnet</td><td>Gemini → Groq → Heuristic</td></tr>
+        <tr><td><code>/api/generate-component-prompt</code></td><td>Gemini 2.5 Flash</td><td>Groq → Claude → Heuristic</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 4. API REFERENCE -->
+  <section id="api">
+    <h2><span class="icon">🔌</span> API Reference</h2>
+    <p>Base URL: <code>http://localhost:5000</code> — CORS open to all origins in development.</p>
+
+    <table class="api-table">
+      <thead>
+        <tr>
+          <th>Method</th><th>Endpoint</th><th>Purpose</th><th>Key Request Fields</th><th>Key Response Fields</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="method post">POST</span></td>
+          <td><code>/api/research</code></td>
+          <td>Market intelligence &amp; solution discovery</td>
+          <td><code>keywords</code>, <code>loadMore</code>, <code>isRerun</code>, <code>existingItemIds</code></td>
+          <td><code>domain</code>, <code>domainsList</code>, <code>competitorInsights[4]</code>, <code>items[5]</code>, <code>modelUsed</code></td>
+        </tr>
+        <tr>
+          <td><span class="method post">POST</span></td>
+          <td><code>/api/generate-blueprint</code></td>
+          <td>Full system architecture blueprint</td>
+          <td><code>solutionId</code>, <code>solutionName</code>, <code>domain</code></td>
+          <td><code>coreScenario</code>, <code>baseTopology</code>, <code>databaseSchemes</code>, <code>endpointManifest</code>, <code>resilienceStrategies</code></td>
+        </tr>
+        <tr>
+          <td><span class="method post">POST</span></td>
+          <td><code>/api/execute-task</code></td>
+          <td>Simulated engineering task execution</td>
+          <td><code>taskName</code>, <code>systemicValue</code>, <code>estimatedEffort</code></td>
+          <td><code>progressScore</code>, <code>outputLogs[]</code>, <code>generatedCodeTemplate</code>, <code>status</code></td>
+        </tr>
+        <tr>
+          <td><span class="method post">POST</span></td>
+          <td><code>/api/generate-document</code></td>
+          <td>Stakeholder document from blueprint</td>
+          <td><code>blueprintId</code>, <code>title</code>, <code>templateType</code></td>
+          <td><code>content</code> (Markdown), <code>templateType</code>, <code>createdAt</code></td>
+        </tr>
+        <tr>
+          <td><span class="method post">POST</span></td>
+          <td><code>/api/generate-component-prompt</code></td>
+          <td>Developer LLM handoff prompt</td>
+          <td><code>componentName</code>, <code>targetLLM</code>, <code>context</code></td>
+          <td><code>promptText</code>, <code>directives</code>, <code>targetLLM</code></td>
+        </tr>
+        <tr>
+          <td><span class="method get">GET</span></td>
+          <td><code>/api/events/model-status</code></td>
+          <td>Real-time SSE model routing events</td>
+          <td>—</td>
+          <td><code>type</code>, <code>provider</code>, <code>operation</code>, <code>timestamp</code></td>
+        </tr>
+        <tr>
+          <td><span class="method get">GET</span></td>
+          <td><code>/api/health</code></td>
+          <td>Service health check</td>
+          <td>—</td>
+          <td><code>status</code>, <code>service</code>, <code>utc</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Document Template Types</h3>
+    <p>The <code>templateType</code> field for <code>/api/generate-document</code> accepts:</p>
+    <ul>
+      <li><code>executive-summary</code> — High-level narrative for C-suite stakeholders</li>
+      <li><code>market-analysis</code> — Competitive landscape and opportunity sizing</li>
+      <li><code>technical-specification</code> — Detailed engineering specification</li>
+      <li><code>proposal</code> — Full solution proposal for client delivery</li>
+    </ul>
+
+    <h3>SSE Event Types</h3>
+    <p>The <code>/api/events/model-status</code> stream emits these event types:</p>
+    <table class="api-table">
+      <thead><tr><th>Type</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><code>connected</code></td><td>Stream established (sent immediately on subscribe)</td></tr>
+        <tr><td><code>attempting</code></td><td>Orchestrator is now calling this provider</td></tr>
+        <tr><td><code>succeeded</code></td><td>Provider returned a valid result</td></tr>
+        <tr><td><code>failed</code></td><td>Provider returned 429/503/error; rotating to next</td></tr>
+        <tr><td><code>fallback</code></td><td>All providers exhausted; using Heuristic Engine</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 5. ARCHITECTURE -->
+  <section id="architecture">
+    <h2><span class="icon">🏛️</span> Architecture</h2>
+    <h3>Frontend Architecture (Angular 19)</h3>
+    <pre>
+MeridianStudio.UI/
+└── src/app/
+    ├── core/
+    │   ├── models/interfaces.ts       ← shared TypeScript types
+    │   ├── services/                  ← global-loading, workspace-store, pptx-export
+    │   ├── interceptors/              ← HTTP interceptors
+    │   ├── pipes/                     ← custom Angular pipes
+    │   └── tokens/                    ← DI tokens (API_BASE_URL)
+    ├── features/
+    │   ├── workspace/                 ← main layout shell
+    │   ├── trends-discovery/          ← research feature
+    │   ├── architectural-blueprinter/ ← blueprint feature
+    │   ├── execution-pipeline/        ← task execution feature
+    │   ├── document-studio/           ← document generation feature
+    │   ├── prompt-studio/             ← LLM prompt generation
+    │   ├── executive-slides/          ← PowerPoint export
+    │   └── domain-settings/           ← configuration
+    └── app.routes.ts                  ← lazy-loaded standalone routes</pre>
+
+    <h3>Backend Architecture (.NET 10)</h3>
+    <pre>
+MeridianStudio.API/
+└── src/
+    ├── Domain/          ← entities, value objects, domain services
+    ├── Application/     ← use cases, DTOs, orchestration logic
+    ├── Infrastructure/  ← LLM clients, caching, SSE hub
+    └── API/             ← Minimal API endpoints, middleware, OpenAPI</pre>
+
+    <h3>Key Architectural Decisions</h3>
+    <ul>
+      <li><strong>Standalone components</strong> — No NgModules; all Angular components are standalone with direct imports</li>
+      <li><strong>Signals-first state</strong> — Angular Signals used for reactive state instead of Subject/BehaviorSubject</li>
+      <li><strong>DDD backend</strong> — Domain/Application/Infrastructure/API four-layer separation enforced</li>
+      <li><strong>Response caching</strong> — Research results cached server-side; <code>isRerun: true</code> evicts cache</li>
+      <li><strong>SSE over WebSocket</strong> — Simpler, HTTP/1.1 compatible, native browser EventSource API</li>
+      <li><strong>Heuristic Engine as last resort</strong> — Guarantees deterministic output with zero external dependencies</li>
+    </ul>
+  </section>
+
+  <!-- 6. INDUSTRY VERTICALS -->
+  <section id="verticals">
+    <h2><span class="icon">🌐</span> Industry Verticals</h2>
+    <p>
+      The Heuristic Engine detects the domain from keywords (in priority order) and returns
+      industry-specific research data, competitor insights, and solution items for these 9 verticals:
+    </p>
+    <div class="vertical-grid">
+      <div class="vertical-item">
+        <span class="vi-num">01</span>
+        <div class="vi-body">
+          <div class="vi-name">Healthcare AI</div>
+          <div class="vi-kw">health, medical, clinical, patient, hospital, fhir, ehr</div>
+        </div>
+      </div>
+      <div class="vertical-item">
+        <span class="vi-num">02</span>
+        <div class="vi-body">
+          <div class="vi-name">Financial Technology</div>
+          <div class="vi-kw">finance, fintech, banking, payment, crypto, trading, aml</div>
+        </div>
+      </div>
+      <div class="vertical-item">
+        <span class="vi-num">03</span>
+        <div class="vi-body">
+          <div class="vi-name">Legal Technology</div>
+          <div class="vi-kw">legal, law, compliance, contract, litigation, nda</div>
+        </div>
+      </div>
+      <div class="vertical-item">
+        <span class="vi-num">04</span>
+        <div class="vi-body">
+          <div class="vi-name">Retail &amp; E-Commerce</div>
+          <div class="vi-kw">retail, shop, order, cart, inventory, fulfillment</div>
+        </div>
+      </div>
+      <div class="vertical-item">
+        <span class="vi-num">05</span>
+        <div class="vi-body">
+          <div class="vi-name">Real Estate &amp; Property</div>
+          <div class="vi-kw">property, real estate, tenant, rent, mortgage, mls</div>
+        </div>
+      </div>
+      <div class="vertical-item">
+        <span class="vi-num">06</span>
+        <div class="vi-body">
+          <div class="vi-name">Education &amp; EdTech</div>
+          <div class="vi-kw">learn, school, course, student, curriculum, lms</div>
+        </div>
+      </div>
+      <div class="vertical-item">
+        <span class="vi-num">07</span>
+        <div class="vi-body">
+          <div class="vi-name">Local Services</div>
+          <div class="vi-kw">plumbing, hvac, contractor, electrician, field service</div>
+        </div>
+      </div>
+      <div class="vertical-item">
+        <span class="vi-num">08</span>
+        <div class="vi-body">
+          <div class="vi-name">Core Software &amp; Tech</div>
+          <div class="vi-kw">devops, api, cloud, kubernetes, microservice, cicd</div>
+        </div>
+      </div>
+      <div class="vertical-item">
+        <span class="vi-num">09</span>
+        <div class="vi-body">
+          <div class="vi-name">Enterprise AI Platform</div>
+          <div class="vi-kw">Fallback — matches any other keyword</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. TECH STACK -->
+  <section id="stack">
+    <h2><span class="icon">🛠️</span> Technology Stack</h2>
+    <div class="stack-grid">
+      <div class="stack-box">
+        <h4>⚡ Frontend (MeridianStudio.UI)</h4>
+        <ul>
+          <li>Angular 19 — standalone components, lazy routes</li>
+          <li>TypeScript 5.6</li>
+          <li>Tailwind CSS v4 via PostCSS</li>
+          <li>RxJS 7.8</li>
+          <li>Lucide Angular — icon library</li>
+          <li>pptxgenjs 4 — PowerPoint export</li>
+          <li>Angular Signals — reactive state</li>
+        </ul>
+      </div>
+      <div class="stack-box">
+        <h4>🔧 Backend (MeridianStudio.API)</h4>
+        <ul>
+          <li>.NET 10 — Minimal API</li>
+          <li>C# 13 — sealed records, primary constructors</li>
+          <li>DDD four-layer architecture</li>
+          <li>Scalar UI — API explorer</li>
+          <li>OpenAPI v1 — machine-readable schema</li>
+          <li>Server-Sent Events (SSE) — real-time model status</li>
+          <li>dotnet user-secrets — LLM key management</li>
+        </ul>
+      </div>
+      <div class="stack-box">
+        <h4>🤖 AI / LLM</h4>
+        <ul>
+          <li>Google Gemini 2.5 Flash — primary research/prompt</li>
+          <li>Groq llama-3.3-70b-versatile — blueprint generation</li>
+          <li>Anthropic Claude Sonnet 4.6 — document generation</li>
+          <li>Built-in Heuristic Engine — offline fallback</li>
+          <li>Multi-model cascade orchestrator</li>
+        </ul>
+      </div>
+      <div class="stack-box">
+        <h4>🧰 Developer Tools</h4>
+        <ul>
+          <li>Angular CLI 19</li>
+          <li>Playwright — browser testing</li>
+          <li>Tailwind CLI — CSS compilation</li>
+          <li>dotnet CLI — API build &amp; run</li>
+          <li>Scalar — interactive API documentation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. ENVIRONMENTS -->
+  <section id="environments">
+    <h2><span class="icon">🌍</span> Environments</h2>
+    <h3>Development (Local)</h3>
+    <div class="env-row"><div class="env-label">Frontend</div><div class="env-value">http://localhost:4200</div></div>
+    <div class="env-row"><div class="env-label">Backend API</div><div class="env-value">http://localhost:5000</div></div>
+    <div class="env-row"><div class="env-label">Scalar UI</div><div class="env-value">http://localhost:5000/scalar/v1</div></div>
+    <div class="env-row"><div class="env-label">OpenAPI JSON</div><div class="env-value">http://localhost:5000/openapi/v1.json</div></div>
+    <div class="env-row"><div class="env-label">CORS Policy</div><div class="env-value">All origins allowed (*) in development</div></div>
+    <div class="env-row"><div class="env-label">SSE Endpoint</div><div class="env-value">http://localhost:5000/api/events/model-status</div></div>
+
+    <h3>Running Locally</h3>
+    <pre>
+# API (from MeridianStudio.API/)
+dotnet run --project MeridianStudio.API.csproj --launch-profile http
+
+# UI (from MeridianStudio.UI/)
+npm start
+
+# Tailwind CSS watch (optional, separate terminal)
+npm run tw:watch</pre>
+
+    <h3>Optional LLM API Keys</h3>
+    <p>The app works fully offline without keys. To enable live model calls:</p>
+    <pre>
+cd MeridianStudio.API
+dotnet user-secrets set "LLM:Gemini:ApiKey" "AIza..."
+dotnet user-secrets set "LLM:Groq:ApiKey"   "gsk_..."
+dotnet user-secrets set "LLM:Claude:ApiKey" "sk-ant-..."</pre>
+  </section>
+
+  <!-- 9. BUSINESS RULES -->
+  <section id="business-rules">
+    <h2><span class="icon">📋</span> Business Rules</h2>
+
+    <h3>Research Pagination</h3>
+    <ul>
+      <li>Page 1 always returns exactly <strong>5 solution items</strong> and <strong>4 competitor insights</strong></li>
+      <li><code>loadMore: true</code> bypasses cache and returns 5 additional items not already in <code>existingItemIds</code></li>
+      <li><code>isRerun: true</code> evicts the server-side cache and regenerates from scratch</li>
+    </ul>
+
+    <h3>Caching</h3>
+    <ul>
+      <li>Research results are cached server-side per keyword</li>
+      <li>Cached responses preserve the original <code>modelUsed</code> value from first generation</li>
+      <li>Blueprint, document, and prompt endpoints do not cache by default</li>
+    </ul>
+
+    <h3>JSON Serialisation</h3>
+    <ul>
+      <li>All API responses use <strong>camelCase</strong> field names</li>
+      <li>Null properties are <strong>omitted</strong> from responses</li>
+      <li><code>WriteIndented: false</code> — compact JSON</li>
+    </ul>
+
+    <h3>SSE Connection</h3>
+    <ul>
+      <li>Clients should connect once on app load using the native browser <code>EventSource</code> API</li>
+      <li>A heartbeat comment (<code>: heartbeat</code>) is emitted every 25 seconds to prevent proxy timeouts</li>
+      <li>All operations emit <code>attempting</code> → (<code>failed</code> →)* <code>succeeded</code> or <code>fallback</code></li>
+    </ul>
+
+    <h3>Blueprint Fields</h3>
+    <ul>
+      <li>All blueprint string fields (<code>coreScenario</code>, <code>baseTopology</code>, etc.) contain <strong>Markdown</strong></li>
+      <li>Newlines in JSON responses are represented as <code>\n</code></li>
+      <li><code>coreScenario</code> is guaranteed ≥ 300 words; <code>content</code> from document generation ≥ 600 words</li>
+    </ul>
+  </section>
+
+  <!-- 10. SUCCESS METRICS -->
+  <section id="success-metrics">
+    <h2><span class="icon">📈</span> Success Metrics</h2>
+    <div class="metric-grid">
+      <div class="metric-card">
+        <div class="mval">9</div>
+        <div class="mlabel">Industry verticals covered by Heuristic Engine</div>
+      </div>
+      <div class="metric-card">
+        <div class="mval">4</div>
+        <div class="mlabel">LLM tiers in the fallback cascade</div>
+      </div>
+      <div class="metric-card">
+        <div class="mval">5</div>
+        <div class="mlabel">Solution items per research response</div>
+      </div>
+      <div class="metric-card">
+        <div class="mval">4</div>
+        <div class="mlabel">Document template types</div>
+      </div>
+      <div class="metric-card">
+        <div class="mval">100%</div>
+        <div class="mlabel">Offline availability via Heuristic Engine</div>
+      </div>
+      <div class="metric-card">
+        <div class="mval">0</div>
+        <div class="mlabel">API keys required for full feature access</div>
+      </div>
+    </div>
+
+    <h3>Quality Gates</h3>
+    <ul>
+      <li>Blueprint <code>coreScenario</code> must be ≥ 300 words</li>
+      <li>Generated documents must be ≥ 600 words of structured Markdown</li>
+      <li>Developer prompts must include ≥ 2 named directives (COMPLETENESS, SAFETY, etc.)</li>
+      <li>Every API response must include a populated <code>modelUsed</code> field</li>
+      <li>SSE heartbeat must be sent every 25 seconds or fewer</li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  MeridianStudio v0.0.1 — AI Solution Agent &amp; System Architect Hub &nbsp;·&nbsp;
+  Generated June 2026 &nbsp;·&nbsp; Internal use only
+</footer>
+</body>
+</html>

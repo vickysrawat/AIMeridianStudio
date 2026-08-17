@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/mermaid/dist/chunks/mermaid.core/swimlanesDiagram-G3AALYLV.mjs"],
+  "sourcesContent": ["import { createFlowDiagram, styles_default } from \"./chunk-PUDLZKDR.mjs\";\nimport \"./chunk-5VM5RSS4.mjs\";\nimport \"./chunk-XXDRQBXY.mjs\";\nimport \"./chunk-VR4S4FIN.mjs\";\nimport \"./chunk-ZIRB5QZD.mjs\";\nimport \"./chunk-FWX5IMBZ.mjs\";\nimport \"./chunk-32BRIVSS.mjs\";\nimport \"./chunk-52WLFC77.mjs\";\nimport \"./chunk-ZGVPDNZ5.mjs\";\nimport \"./chunk-C7G6YPKG.mjs\";\nimport \"./chunk-7BUUIJ7U.mjs\";\nimport \"./chunk-OGEWGWER.mjs\";\nimport \"./chunk-Q4XR5HBZ.mjs\";\nimport \"./chunk-HOUHSVGY.mjs\";\nimport \"./chunk-ICXQ74PX.mjs\";\nimport \"./chunk-WYO6CB5R.mjs\";\nimport \"./chunk-X3CZISLH.mjs\";\nimport { __name } from \"./chunk-Y2CYZVJY.mjs\";\n\n// src/diagrams/swimlanes/styles.ts\nvar getStyles = /* @__PURE__ */__name(options => `${styles_default(options)}\n  .swimlane.cluster rect {\n    stroke: ${options.clusterBorder} !important;\n  }\n  [data-look=\"neo\"].cluster rect {\n    filter: none;\n  }\n`, \"getStyles\");\nvar styles_default2 = getStyles;\n\n// src/diagrams/swimlanes/swimlanesDiagram.ts\nvar diagram = createFlowDiagram({\n  defaultLayout: \"swimlane\",\n  styles: styles_default2\n});\nexport { diagram };"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAoBA,IAAI,YAA2B,OAAO,aAAW,GAAG,eAAe,OAAO,CAAC;AAAA;AAAA,cAE7D,QAAQ,aAAa;AAAA;AAAA;AAAA;AAAA;AAAA,GAKhC,WAAW;AACd,IAAI,kBAAkB;AAGtB,IAAI,UAAU,kBAAkB;AAAA,EAC9B,eAAe;AAAA,EACf,QAAQ;AACV,CAAC;",
+  "names": []
+}
